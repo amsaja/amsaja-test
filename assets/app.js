@@ -49,7 +49,11 @@ fetch("data/site.json")
     })).join("");
 
     $("short-fiction").innerHTML = d.works.short_fiction.map(x => row({
-      year:x.year, title:`「${x.title}」`, sub:x.publication, right:x.url ? "Open ↗" : "", url:x.url
+      year:x.year,
+      title:`「${x.title}」`,
+      sub:x.publication,
+      right:x.status || (x.url ? "보기 ↗" : ""),
+      url:x.url
     })).join("");
 
     $("awards-list").innerHTML = d.awards.map(x => row({
@@ -57,11 +61,14 @@ fetch("data/site.json")
     })).join("");
 
     $("translations-list").innerHTML = d.translations.map(x => row({
-      year:x.year, title:x.title, sub:[x.language,x.publisher].filter(Boolean).join(" · "), right:x.status
+      year:x.year,
+      title:x.title,
+      sub:[`원작 『${x.original_title}』`, x.language, x.publisher].filter(Boolean).join(" · "),
+      right:x.status
     })).join("");
 
     $("columns-list").innerHTML = d.columns.map(x => row({
-      year:x.date.slice(0,4), title:x.title, sub:x.publication, right:"Read ↗", url:x.url
+      year:x.date.slice(0,4), title:x.title, sub:x.publication, right:"읽기 ↗", url:x.url
     })).join("");
 
     $("talks-list").innerHTML = d.talks.map(g => `
@@ -77,10 +84,10 @@ fetch("data/site.json")
       </div>`).join("");
 
     $("press-list").innerHTML = d.press.map(x => row({
-      year:x.date.slice(0,4), title:x.title, sub:`${x.source} · ${x.type}`, right:"Read ↗", url:x.url
+      year:x.date.slice(0,4), title:x.title, sub:`${x.source} · ${x.type}`, right:"읽기 ↗", url:x.url
     })).join("");
 
-    $("updated").textContent = `Last updated ${d.updated}`;
+    $("updated").textContent = `마지막 업데이트 ${d.updated}`;
   })
   .catch(err => {
     console.error(err);
