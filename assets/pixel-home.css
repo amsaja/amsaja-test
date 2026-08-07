@@ -276,3 +276,111 @@ a.stage:hover{
   html{scroll-behavior:auto}
   .stage,.world-hotspot span,.punch-message{transition:none}
 }
+
+
+/* =========================================================
+   v2 mobile/world fix
+   - remove baked-in fake nav by using clean crop
+   - mobile hero becomes horizontally scrollable instead of cropped
+   ========================================================= */
+
+.world-scroll{
+  width:100%;
+  overflow:hidden;
+  background:var(--px-sky);
+}
+
+.world-wrap{
+  position:relative;
+  max-width:1280px;
+  margin:0 auto;
+  overflow:visible;
+}
+
+.world-image{
+  display:block;
+  width:100%;
+  height:auto;
+}
+
+/* hotspot positions recalibrated for clean crop (top 108px removed) */
+.hs-works{left:38%;top:32%;width:10%;height:43%}
+.hs-column{left:49%;top:26%;width:11%;height:49%}
+.hs-press{left:61%;top:33%;width:10%;height:42%}
+.hs-talks{left:71%;top:30%;width:10%;height:45%}
+.hs-history{left:81%;top:18%;width:11%;height:57%}
+.hs-contact{left:91%;top:34%;width:8%;height:41%}
+.bag-hotspot{left:29%;top:32%;width:8%;height:42%}
+.punch-message{left:25%;top:14%}
+
+@media(max-width:720px){
+  .world-scroll{
+    overflow-x:auto;
+    overflow-y:hidden;
+    -webkit-overflow-scrolling:touch;
+    scroll-snap-type:x proximity;
+    scrollbar-width:thin;
+    overscroll-behavior-x:contain;
+    touch-action:pan-x pan-y;
+  }
+
+  .world-wrap{
+    width:980px;
+    max-width:none;
+    margin:0;
+    scroll-snap-align:start;
+  }
+
+  .world-image{
+    width:980px;
+    min-height:0;
+    object-fit:initial;
+    object-position:initial;
+  }
+
+  /* Keep every hotspot usable on mobile */
+  .world-hotspot{
+    display:block;
+  }
+
+  .world-hotspot span{
+    display:none;
+  }
+
+  .bag-hotspot{
+    left:29%;
+    top:32%;
+    width:8%;
+    height:42%;
+  }
+
+  .punch-message{
+    left:25%;
+    top:12%;
+    font-size:11px;
+  }
+
+  .world-guide{
+    position:relative;
+  }
+}
+
+/* visual nudge that the hero can be swiped horizontally */
+@media(max-width:720px){
+  .world-scroll:after{
+    content:"←  좌우로 밀어 둘러보기  →";
+    position:sticky;
+    left:12px;
+    bottom:12px;
+    display:inline-block;
+    margin:0 0 10px 12px;
+    padding:7px 10px;
+    border:2px solid #2b241d;
+    border-radius:999px;
+    background:rgba(248,239,215,.92);
+    color:#241f1a;
+    font-size:10px;
+    font-weight:900;
+    pointer-events:none;
+  }
+}
