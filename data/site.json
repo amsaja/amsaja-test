@@ -172,9 +172,9 @@
   "blurbs": [
     {
       "year": "2026",
-      "title": "도서 정보 업데이트 예정",
-      "author": "",
-      "publisher": "",
+      "title": "야수의 산",
+      "author": "홍진희",
+      "publisher": "클레이하우스",
       "role": "추천사",
       "url": "https://product.kyobobook.co.kr/detail/S000220695244"
     }
@@ -246,8 +246,15 @@
       "label": "학교 · 교육기관",
       "items": [
         {
+          "year": "2026",
           "place": "의정부 송양고등학교",
-          "title": "「쓰는 나, 만드는 나」 소설 쓰기와 독립 출판",
+          "title": "「쓰는 나, 만드는 나」 2026 — 소설 쓰기와 독립 출판",
+          "detail": "강연"
+        },
+        {
+          "year": "2025",
+          "place": "의정부 송양고등학교",
+          "title": "「쓰는 나, 만드는 나」 — 소설 쓰기와 독립 출판",
           "detail": "2회"
         },
         {

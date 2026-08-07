@@ -172,3 +172,14 @@ footer{
   color:var(--muted);
   vertical-align:middle;
 }
+
+
+.talk-year{
+  display:inline-block;
+  margin-right:8px;
+  color:var(--muted);
+  font-family:Georgia,serif;
+  font-size:11px;
+  font-style:normal;
+  font-weight:400;
+}

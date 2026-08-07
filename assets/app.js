@@ -69,7 +69,7 @@ fetch("data/site.json")
         <h3>${g.label}</h3>
         <div class="talk-list">
           ${g.items.map(x => `<div class="talk-item">
-            <span class="talk-place">${x.place}</span>
+            <span class="talk-place">${x.year ? `<em class="talk-year">${x.year}</em>` : ""}${x.place}</span>
             <span class="talk-title">${x.title}</span>
             <span class="talk-detail">${x.detail || ""}</span>
           </div>`).join("")}
