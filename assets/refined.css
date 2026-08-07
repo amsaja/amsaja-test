@@ -387,3 +387,9 @@ a:focus-visible,button:focus-visible{
 .media-link{
   white-space:nowrap;
 }
+
+
+/* pagination hard fix */
+.media-archive-row[hidden]{
+  display:none !important;
+}

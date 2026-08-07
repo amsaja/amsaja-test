@@ -14,6 +14,8 @@
     items.forEach((item, i) => {
       const show = Math.floor(i / pageSize) === page;
       item.hidden = !show;
+      item.style.display = show ? "grid" : "none";
+      item.setAttribute("aria-hidden", show ? "false" : "true");
     });
     status.textContent = `${page + 1} / ${pages}`;
     prev.disabled = page === 0;
