@@ -29,3 +29,198 @@ a{color:inherit;text-decoration:none}
 @media(max-width:720px){html{scroll-padding-top:62px}.simple-header{padding:12px 18px}.simple-brand strong{font-size:24px}.world-banner img{width:100%;height:auto;max-height:none;object-fit:contain}.content-width{width:min(100% - 34px,980px)}.intro-section{padding:52px 0 70px}.intro-lead{font-size:25px}.long-section{padding:65px 0}.section-head{margin-bottom:32px}.section-head h2{font-size:34px}.stage-badge{width:48px;height:48px;font-size:16px}.featured-book{grid-template-columns:100px 1fr;gap:20px;padding:19px}.featured-book h3{font-size:24px}.featured-book img{max-height:180px}.book-quote{font-size:16px}.compact-list{display:none}.fiction-lines>div,.fiction-lines>a{grid-template-columns:48px 1fr;gap:10px}.fiction-lines small{grid-column:2;justify-self:start;text-align:left}.essay-grid{grid-template-columns:1fr}.talk-grid{grid-template-columns:1fr}.history-block{grid-template-columns:1fr;gap:10px}.history-year{font-size:25px}}
 @media(max-width:430px){.floating-dock nav a b{display:none}.floating-dock nav a{min-width:37px}.dock-mascots{right:2px}.featured-book{grid-template-columns:1fr}.featured-book img{width:130px}.line-item{grid-template-columns:48px 1fr 18px}.line-main strong{font-size:17px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+
+/* =========================================================
+   v2 functional hero + stronger intro + responsive audit
+   ========================================================= */
+.interactive-world{
+  background:#7bd2ee;
+  border-bottom:5px solid #34291e;
+}
+.hero-scroll{
+  width:100%;
+  overflow:hidden;
+}
+.hero-map{
+  position:relative;
+  width:min(100%,1400px);
+  margin:0 auto;
+}
+.hero-map>img{
+  display:block;
+  width:100%;
+  height:auto;
+}
+.hero-hotspot,.hero-bag{
+  position:absolute;
+  display:block;
+  border:0;
+  background:transparent;
+  cursor:pointer;
+}
+.hero-hotspot span{
+  position:absolute;
+  left:50%;
+  bottom:3px;
+  transform:translateX(-50%);
+  padding:4px 7px;
+  border:2px solid #2e271f;
+  border-radius:5px;
+  background:rgba(247,238,216,.94);
+  font-size:9px;
+  font-weight:900;
+  opacity:0;
+  transition:opacity .14s ease;
+  pointer-events:none;
+}
+.hero-hotspot:focus-visible,.hero-bag:focus-visible{
+  outline:4px solid #fff;
+  outline-offset:2px;
+}
+@media(hover:hover) and (pointer:fine){
+  .hero-hotspot:hover span{opacity:1}
+  .hero-hotspot:hover{background:rgba(255,255,255,.08)}
+}
+
+/* hotspot positions calibrated to the newly cropped scene */
+.hero-works{left:35%;top:32%;width:10%;height:55%}
+.hero-columns{left:46%;top:30%;width:10%;height:57%}
+.hero-press{left:57%;top:31%;width:10%;height:56%}
+.hero-talks{left:67%;top:29%;width:10%;height:58%}
+.hero-history{left:77%;top:22%;width:11%;height:65%}
+.hero-contact{left:88%;top:34%;width:10%;height:52%}
+.hero-bag{left:25%;top:28%;width:8%;height:58%}
+
+.hero-punch{
+  position:absolute;
+  left:24%;
+  top:4%;
+  transform:translateX(-50%);
+  padding:8px 11px;
+  border:2px solid #2f281f;
+  border-radius:7px;
+  background:#f7eed8;
+  font-size:10px;
+  font-weight:900;
+  box-shadow:3px 3px 0 rgba(0,0,0,.18);
+  opacity:0;
+  transition:opacity .15s ease;
+  pointer-events:none;
+}
+.hero-punch.show{opacity:1}
+.hero-caption{
+  display:flex;
+  justify-content:center;
+  gap:24px;
+  padding:10px 18px 12px;
+  background:#211d18;
+  color:#f7eed8;
+  font-size:11px;
+  text-align:center;
+}
+.mobile-swipe{display:none;color:#f1cc5a}
+
+.intro-grid{
+  display:grid;
+  grid-template-columns:minmax(0,1.35fr) minmax(250px,.65fr);
+  gap:64px;
+  align-items:start;
+}
+.intro-facts{
+  border-top:2px solid rgba(25,33,43,.22);
+}
+.intro-facts>div{
+  display:grid;
+  grid-template-columns:62px 1fr;
+  gap:12px;
+  padding:15px 0;
+  border-bottom:1px solid rgba(25,33,43,.14);
+}
+.intro-facts strong{
+  font-family:Georgia,serif;
+  color:var(--green);
+  font-size:17px;
+}
+.intro-facts span{
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.55;
+}
+
+/* floating mascot now uses a single image containing author + white maltipoo */
+.dock-mascots{
+  display:flex;
+  align-items:flex-end;
+  justify-content:center;
+}
+.dock-mascots .mascot-pair{
+  position:static;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+}
+.dock-mascots .maltipoo{display:none}
+
+/* external-link affordance is clear without looking like every row is clickable */
+.line-item.external .line-arrow{
+  color:var(--red);
+}
+.line-item.muted{
+  cursor:default;
+}
+
+/* improve touch/accessibility */
+.floating-dock nav a,
+.contact-links a{
+  min-height:40px;
+}
+@media(max-width:900px){
+  .dock-mascots .mascot-pair{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+  }
+}
+
+@media(max-width:720px){
+  .hero-scroll{
+    overflow-x:auto;
+    overflow-y:hidden;
+    -webkit-overflow-scrolling:touch;
+    overscroll-behavior-x:contain;
+    scrollbar-width:thin;
+  }
+  .hero-map{
+    width:980px;
+    max-width:none;
+    margin:0;
+  }
+  .hero-map>img{
+    width:980px;
+    max-width:none;
+  }
+  .hero-hotspot span{display:none}
+  .hero-caption{
+    justify-content:space-between;
+    font-size:10px;
+  }
+  .mobile-swipe{display:inline}
+  .intro-grid{
+    grid-template-columns:1fr;
+    gap:36px;
+  }
+  .intro-section h1{font-size:58px}
+  .intro-sub{font-size:15px}
+}
+@media(max-width:430px){
+  .hero-map{
+    width:900px;
+  }
+  .hero-map>img{
+    width:900px;
+  }
+  .hero-caption>span:first-child{display:none}
+  .hero-caption{justify-content:center}
+}

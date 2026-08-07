@@ -24,16 +24,42 @@
 </header>
 
 <main id="top">
-  <section class="world-banner">
-    <img src="assets/images/pixel-world-banner.jpg" alt="복싱 글러브를 낀 작가 캐릭터와 강아지, 샌드백, 책과 신문, 마이크와 성이 있는 픽셀 풍경">
-  </section>
+  <section class="world-banner interactive-world" aria-label="김슬기 작가의 픽셀 아카이브 지도">
+      <div class="hero-scroll">
+        <div class="hero-map">
+          <img src="assets/images/hero-world-v2.jpg" alt="복싱 글러브를 낀 작가 캐릭터와 흰색 말티푸 우주, 샌드백, 책·신문·카메라·마이크·성·우체통이 있는 픽셀 풍경">
+          <a class="hero-hotspot hero-works" href="#works" aria-label="작품으로 이동"><span>WORKS</span></a>
+          <a class="hero-hotspot hero-columns" href="#columns" aria-label="칼럼으로 이동"><span>COLUMN</span></a>
+          <a class="hero-hotspot hero-press" href="#press" aria-label="기사와 인터뷰로 이동"><span>PRESS</span></a>
+          <a class="hero-hotspot hero-talks" href="#talks" aria-label="강연과 수업으로 이동"><span>TALKS</span></a>
+          <a class="hero-hotspot hero-history" href="#history" aria-label="히스토리로 이동"><span>HISTORY</span></a>
+          <a class="hero-hotspot hero-contact" href="#contact" aria-label="연락처로 이동"><span>CONTACT</span></a>
+          <button class="hero-bag" type="button" aria-label="샌드백 치기"></button>
+          <div class="hero-punch" id="hero-punch" role="status" aria-live="polite">퍽! 오늘도 씩씩하게. 🥊</div>
+        </div>
+      </div>
+      <div class="hero-caption">
+        <span>픽셀 세계를 눌러 바로 이동할 수 있어요.</span>
+        <span class="mobile-swipe">모바일에서는 좌우로 밀어 둘러보세요 →</span>
+      </div>
+    </section>
 
   <section id="about" class="intro-section content-width">
-    <p class="eyebrow">NOVELIST · WRITER</p>
-    <h1>김슬기</h1>
-    <p class="intro-lead">소설가 김슬기입니다. 노동의 현장과 자본주의의 이면, 주거 문제와 그 안에서 살아가는 사람들에게 관심이 있습니다.</p>
-    <p class="intro-sub">순수문학과 대중문학의 경계를 나누기보다 오래 읽히는 재미있는 소설을 쓰고 싶습니다.</p>
-  </section>
+      <p class="eyebrow">NOVELIST · WRITER</p>
+      <h1>김슬기</h1>
+      <div class="intro-grid">
+        <div>
+          <p class="intro-lead">농담이 우리를 최악으로부터 빗겨나가게 만든다고 믿는 소설가입니다.</p>
+          <p class="intro-sub">2024년 국제신문 신춘문예 단편소설 부문으로 등단했습니다. 장편소설 『강하고 아름다운 할머니가 되고 싶어』를 비롯해 단편소설과 에세이를 쓰고 있습니다. 노동의 현장과 자본주의의 이면, 주거 문제와 그 안에서 살아가는 사람들에게 관심이 있습니다.</p>
+          <p class="intro-sub">순수문학과 대중문학의 경계를 나누기보다 오래 읽히는 재미있는 소설을 쓰고 싶습니다. 강연과 글쓰기 수업, 독자와의 만남도 이어가고 있습니다.</p>
+        </div>
+        <div class="intro-facts">
+          <div><strong>2024</strong><span>국제신문 신춘문예 단편소설 부문 당선</span></div>
+          <div><strong>2025</strong><span>장편소설 『강하고 아름다운 할머니가 되고 싶어』 출간</span></div>
+          <div><strong>2026</strong><span>서울국제도서전 ‘한국에서 가장 재미있는 책’ 선정 · 국제신문 ‘아침숲길’ 정기 필진</span></div>
+        </div>
+      </div>
+    </section>
 
   <section id="works" class="long-section content-width">
     <div class="section-head"><span class="stage-badge green">01</span><div><p>WORKS</p><h2>작품</h2></div></div>
@@ -139,8 +165,7 @@
 <!-- Floating navigation follows the reader. -->
 <aside class="floating-dock" aria-label="페이지 바로가기">
   <div class="dock-mascots" aria-hidden="true">
-    <img src="assets/images/pixel-character.jpg" alt="">
-    <span class="maltipoo"><i class="ear left"></i><i class="ear right"></i><i class="eye e1"></i><i class="eye e2"></i><i class="nose"></i></span>
+    <img class="mascot-pair" src="assets/images/mascot-author-dog.jpg" alt="">
   </div>
   <nav>
     <a href="#about" data-section="about"><span>🏠</span><b>ABOUT</b></a>

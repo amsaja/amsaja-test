@@ -16,3 +16,16 @@
     sections.forEach(s => observer.observe(s));
   }
 })();
+
+
+(() => {
+  const bag = document.querySelector('.hero-bag');
+  const msg = document.getElementById('hero-punch');
+  if (!bag || !msg) return;
+  let timer = null;
+  bag.addEventListener('click', () => {
+    clearTimeout(timer);
+    msg.classList.add('show');
+    timer = setTimeout(() => msg.classList.remove('show'), 1400);
+  });
+})();
