@@ -4,187 +4,120 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>김슬기 | 소설가</title>
-  <meta name="description" content="소설가 김슬기의 공식 홈페이지. 작품, 강연과 워크숍, 인터뷰·기사·칼럼 아카이브와 연락처를 확인할 수 있습니다.">
-
+  <meta name="description" content="소설가 김슬기의 공식 홈페이지. 작품, 칼럼, 기사와 인터뷰, 강연, 히스토리와 연락처를 둘러보세요.">
   <meta property="og:type" content="website">
   <meta property="og:title" content="김슬기 | 소설가">
-  <meta property="og:description" content="퍽퍽한 삶에, 재미있는 이야기 한 스푼. 소설가 김슬기의 작품과 활동 아카이브.">
+  <meta property="og:description" content="퍽퍽한 삶에, 재미있는 이야기 한 스푼. 김슬기 소설가의 작품과 활동 아카이브.">
   <meta property="og:url" content="https://amsaja.kr/">
   <meta property="og:image" content="https://amsaja.kr/assets/images/og-image.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://amsaja.kr/">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="assets/pixel-home.css">
 </head>
-<body>
-<header class="site-header">
-  <a class="brand" href="index.html">김슬기 <span>KIM SEULGI</span></a>
-  <nav>
-    <a href="#works">WORKS</a>
-    <a href="#about">ABOUT</a>
+<body class="pixel-site">
+
+<header class="pixel-header">
+  <a class="pixel-brand" href="index.html">
+    <strong>김슬기</strong><span>KIM SEULGI</span>
+  </a>
+  <nav class="pixel-nav" aria-label="주요 메뉴">
+    <a href="works.html">WORKS</a>
+    <a href="archive.html#columns">COLUMN</a>
+    <a href="archive.html#press">PRESS</a>
     <a href="talks.html">TALKS</a>
-    <a href="archive.html">ARCHIVE</a>
-    <a class="contact-link" href="#contact">CONTACT</a>
+    <a href="archive.html#history">HISTORY</a>
+    <a href="#contact">CONTACT</a>
   </nav>
 </header>
 
 <main>
-  <section class="hero">
-    <div class="hero-copy">
-      <p class="eyebrow">NOVELIST · WRITER</p>
-      <h1>퍽퍽한 삶에,<br>재미있는 이야기<br>한 스푼.</h1>
-      <p class="hero-intro">
-        재미있는 이야기를 오래, 즐겁게 쓰고 싶습니다.<br>
-   
-      </p>
-      <div class="hero-actions">
-        <a class="button solid" href="#works">작품 보기</a>
-        <a class="button text" href="#contact">강연·협업 문의 →</a>
-      </div>
-      <div class="social-inline">
-        <a href="https://instagram.com/hit_seul" target="_blank" rel="noopener">Instagram ↗</a>
-        <a href="https://blog.naver.com/amsaja_books" target="_blank" rel="noopener">Blog ↗</a>
-      </div>
+  <section class="game-hero" aria-label="김슬기 작가의 픽셀 아카이브">
+    <div class="world-wrap">
+      <picture>
+        <source media="(max-width: 720px)" srcset="assets/images/pixel-world-mobile.jpg">
+        <img class="world-image" src="assets/images/pixel-world.jpg" alt="복싱 글러브를 낀 작가 캐릭터와 강아지, 샌드백, 작품·칼럼·기사·강연·히스토리·연락처 건물이 있는 픽셀 게임 풍경">
+      </picture>
+
+      <!-- Desktop image-map style hotspots. Percentage positions keep them aligned responsively. -->
+      <a class="world-hotspot hs-works" href="works.html"><span>WORKS</span></a>
+      <a class="world-hotspot hs-column" href="archive.html#columns"><span>COLUMN</span></a>
+      <a class="world-hotspot hs-press" href="archive.html#press"><span>PRESS</span></a>
+      <a class="world-hotspot hs-talks" href="talks.html"><span>TALKS</span></a>
+      <a class="world-hotspot hs-history" href="archive.html#history"><span>HISTORY</span></a>
+      <a class="world-hotspot hs-contact" href="#contact"><span>CONTACT</span></a>
+      <button class="bag-hotspot" type="button" aria-label="샌드백 치기" title="샌드백 치기"></button>
+
+      <div id="punch-message" class="punch-message" role="status" aria-live="polite">퍽! 소설은 체력이다. 🥊</div>
     </div>
-    <figure class="hero-photo real-photo"><img src="assets/images/hero.jpg" alt="대화하며 손짓하는 소설가 김슬기"></figure>
+    <p class="world-guide">이미지 속 장소를 눌러 둘러보세요. <span>샌드백도 눌러볼 수 있어요.</span></p>
   </section>
 
-  <section class="manifesto">
-    <p class="section-label">WRITING</p>
-    <h2>재미있는 소설을 오래 쓰고 싶습니다.</h2>
-    <p>노동, 집, 돈, 쾌활하고 이상한 사람들에 관심이 있습니다.</p>
-  </section>
+  <section class="stage-menu" aria-label="사이트 메뉴">
+    <a class="stage stage-works" href="works.html">
+      <span class="stage-no">01</span>
+      <div><small>📚 작품</small><h2>WORKS</h2><p>장편소설, 단편소설, 에세이</p></div>
+      <span class="stage-arrow">→</span>
+    </a>
 
-  <section id="works" class="section">
-    <div class="section-heading">
-      <p class="section-label">FEATURED WORK</p>
-      <h2>대표작</h2>
-    </div>
+    <a class="stage stage-column" href="archive.html#columns">
+      <span class="stage-no">02</span>
+      <div><small>📰 내가 쓴 글</small><h2>COLUMN</h2><p>국제신문 ‘아침숲길’ 칼럼</p></div>
+      <span class="stage-arrow">↗</span>
+    </a>
 
-    <article class="featured-work">
-      <div class="book-cover real-cover"><img src="assets/images/book-grandmother.jpg" alt="강하고 아름다운 할머니가 되고 싶어 책 표지"></div>
-      <div class="work-copy">
-        <p class="meta">장편소설 · 2025</p>
-        <h3>강하고 아름다운 할머니가 되고 싶어</h3>
-        <p class="quote">“다 자란 어른이 회복하는 데도 온 마을이 필요하다.”</p>
-        <ul class="plain-list">
-          <li>서울국제도서전 ‘한국에서 가장 재미있는 책’ 선정</li>
-          <li>문학나눔 선정</li>
-          <li>러시아 번역판 출간 · 인도네시아 번역판 출간 예정</li>
-        </ul>
-        <a class="arrow-link" href="works.html">작품 자세히 보기 →</a>
-      </div>
-    </article>
+    <a class="stage stage-press" href="archive.html#press">
+      <span class="stage-no">03</span>
+      <div><small>📷 기사 · 인터뷰</small><h2>PRESS</h2><p>외부 매체가 기록한 기사와 인터뷰</p></div>
+      <span class="stage-arrow">→</span>
+    </a>
 
-    
-    <div class="book-shelf" aria-label="출간 및 수록 작품">
-      <img src="assets/images/book-second-2025.jpg" alt="두 번째 원고 2025">
-      <img src="assets/images/book-likes.jpg" alt="내가 좋아하는 것들, 소설">
-      <img src="assets/images/book-warmblood.jpg" alt="변온동물">
-      <img src="assets/images/book-spring2024.jpg" alt="2024 신춘문예 당선소설집">
-      <img src="assets/images/book-mongol.jpg" alt="금요일 퇴사 화요일 몽골">
-    </div>
+    <a class="stage stage-talks" href="talks.html">
+      <span class="stage-no">04</span>
+      <div><small>🎤 강연 · 수업</small><h2>TALKS</h2><p>작가와의 만남, 특강, 글쓰기 워크숍</p></div>
+      <span class="stage-arrow">→</span>
+    </a>
 
-    <div class="work-grid">
-      <article class="work-card">
-        <p class="meta">단편소설</p>
-        <h3>에버그로잉 더블 그레이트 아파트</h3>
-        <p>발표작과 수록작을 연도별로 정리합니다.</p>
-      </article>
-      <article class="work-card">
-        <p class="meta">에세이 / 산문</p>
-        <h3>글과 기록</h3>
-        <p>소설 밖에서 쓴 산문과 칼럼을 모아둡니다.</p>
-      </article>
-    </div>
-  </section>
+    <a class="stage stage-history" href="archive.html#history">
+      <span class="stage-no">05</span>
+      <div><small>🏰 연혁 · 선정</small><h2>HISTORY</h2><p>등단, 출간, 수상·선정, 번역과 활동</p></div>
+      <span class="stage-arrow">→</span>
+    </a>
 
-  <section class="now-band">
-    <p class="section-label">NOW</p>
-    <div>
-      <h2>지금도 쓰고 있습니다.</h2>
-      <p>새로운 장편소설과 단편소설, 칼럼을 씁니다.</p>
-    </div>
-    <a href="archive.html">최근 활동 보기 →</a>
-  </section>
-
-  <section id="talks" class="section talks">
-    <figure class="talk-photo real-photo"><img src="assets/images/smile.jpg" alt="책을 들고 웃는 소설가 김슬기"></figure>
-    <div class="talk-copy">
-      <p class="section-label">TALKS</p>
-      <h2>쓰는 즐거움을 이야기합니다.</h2>
-      <div class="talk-item">
-        <h3>작가와의 만남</h3>
-        <p>소설과 작가의 삶, 작품을 둘러싼 질문을 함께 나눕니다.</p>
-      </div>
-      <div class="talk-item">
-        <h3>소설 쓰기</h3>
-        <p>처음 써보는 사람부터 퇴고와 합평이 필요한 사람까지.</p>
-      </div>
-      <div class="talk-item">
-        <h3>쓰는 사람으로 살아가기</h3>
-        <p>창작과 일, 독립출판, AI 시대의 글쓰기에 대해 고민합니다.</p>
-      </div>
-      <p class="small">학교 · 도서관 · 공공기관 · 독서모임 · 문화공간</p>
-      <div class="talk-actions"><a class="button solid" href="talks.html">강연·워크숍 보기</a><a class="button text" href="#contact">문의하기 →</a></div>
-    </div>
-  </section>
-
-  <section id="about" class="section human">
-    <div class="human-intro">
+    <section id="contact" class="stage stage-contact" aria-labelledby="contact-title">
+      <span class="stage-no">06</span>
       <div>
-        <p class="section-label">ABOUT</p>
-        <h2>소설가, 김슬기</h2>
-        <p class="lead">농담이 우리를 최악으로부터 빗겨나가게 만든다고 믿습니다.</p>
-        <p class="body-copy">독립출판으로 에세이와 소설을 쓰기 시작했고, 2024년 국제신문 신춘문예 단편소설 부문으로 등단했습니다. 노동의 현장과 자본주의의 이면, 주거 문제와 그 안에서 살아가는 사람들에게 관심이 있습니다. 순수문학과 대중문학의 경계를 나누기보다 오래 읽히는 재미있는 소설을 쓰고 싶습니다.</p>
-        <div class="profile-cv">
-          <div><span>2026</span><p>아르코 장편소설 창작 지원 선정<br>서울국제도서전 ‘한국에서 가장 재미있는 책’ 선정<br>국제신문 ‘아침숲길’ 정기 필진</p></div>
-          <div><span>2025</span><p>장편소설 『강하고 아름다운 할머니가 되고 싶어』 출간</p></div>
-          <div><span>2024</span><p>제12회 브런치북 출판 프로젝트 소설 부문 대상<br>국제신문 신춘문예 단편소설 부문 당선</p></div>
-        </div>
-      </div>
-      <figure class="about-photo real-photo"><img src="assets/images/book-portrait.jpg" alt="책을 들고 야외에 서 있는 소설가 김슬기"></figure>
-    </div>
-  </section>
-
-  <section class="section recent">
-    <div class="section-heading split">
-      <div>
-        <p class="section-label">RECENT</p>
-        <h2>최근 기록</h2>
-      </div>
-      <a href="archive.html">전체 아카이브 →</a>
-    </div>
-    <div id="recent-list" class="archive-preview"></div>
-  </section>
-
-  <section id="contact" class="contact contact-light">
-    <p class="section-label">CONTACT</p>
-    <div class="contact-grid">
-      <div>
-        <p>강연 · 작가와의 만남 · 인터뷰 · 원고 청탁 · 협업 제안</p>
-      </div>
-      <div class="contact-details">
-        <p class="email-plain">amsajabooks@naver.com</p>
-        <div class="contact-social">
+        <small>📮 연락처</small>
+        <h2 id="contact-title">CONTACT</h2>
+        <p class="pixel-email">amsajabooks@naver.com</p>
+        <div class="pixel-social">
           <a href="https://instagram.com/hit_seul" target="_blank" rel="noopener">Instagram @hit_seul ↗</a>
           <a href="https://blog.naver.com/amsaja_books" target="_blank" rel="noopener">Naver Blog ↗</a>
         </div>
       </div>
+    </section>
+  </section>
+
+  <section class="pixel-ending">
+    <div class="ending-copy">
+      <p class="section-label">KIM SEULGI</p>
+      <h2>재미있는 소설을 오래 쓰고 싶습니다.</h2>
+      <p>노동, 집, 돈, 쾌활하고 이상한 사람들에 관심이 있습니다.</p>
     </div>
+    <img src="assets/images/book-grandmother.jpg" alt="강하고 아름다운 할머니가 되고 싶어 책 표지">
   </section>
 </main>
 
-<footer>
-  <div>© Kim Seulgi</div>
+<footer class="pixel-footer">
+  <span>© Kim Seulgi</span>
   <div>
+    <a href="works.html">Works</a>
     <a href="archive.html">Archive</a>
-    <span class="email-plain">Email</span>
-    <a href="https://instagram.com/hit_seul">Instagram</a>
-    <a href="https://blog.naver.com/amsaja_books">Blog</a>
+    <a href="talks.html">Talks</a>
   </div>
 </footer>
 
-<script src="assets/main.js"></script>
+<script src="assets/pixel-home.js"></script>
 </body>
 </html>

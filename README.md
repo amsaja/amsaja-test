@@ -1,50 +1,29 @@
-# 김슬기 공식 홈페이지 — 공개용 최종판
+# 김슬기 픽셀 포트폴리오 — GitHub Pages 패키지
 
-이 버전은 현재 제공된 이력서, 작품 정보, 사진, 책 표지와 기존 홈페이지 아카이브만으로 구성했습니다.
+## 구조
+- `index.html` : 픽셀 게임처럼 보이는 새 메인 화면
+- `works.html` : 작품 상세
+- `talks.html` : 강연/수업
+- `archive.html` : 칼럼 / 기사·인터뷰 / 히스토리
+- `assets/images/pixel-world.jpg` : 데스크톱 메인 픽셀 비주얼
+- `assets/images/pixel-world-mobile.jpg` : 모바일 메인 비주얼
+- `assets/pixel-home.css` : 새 메인 디자인
+- `assets/pixel-home.js` : 샌드백 클릭 인터랙션
+- `data/` : 기존 아카이브 데이터
 
-## 주요 파일
-- index.html — 메인 / 소개 / 연락처
-- works.html — 작품
-- talks.html — 강연과 워크숍
-- archive.html — 활동 아카이브
-- data/archive.json — 아카이브 데이터
-- assets/style.css — 디자인
-- assets/images/ — 사진과 표지
-- robots.txt / sitemap.xml — 검색엔진용
-- 404.html — 오류 페이지
+## 실제 링크
+- WORKS → `works.html`
+- COLUMN → `archive.html#columns`
+- PRESS → `archive.html#press`
+- TALKS → `talks.html`
+- HISTORY → `archive.html#history`
+- CONTACT → 메인 페이지 연락처
+- Instagram → https://instagram.com/hit_seul
+- Blog → https://blog.naver.com/amsaja_books
 
+## GitHub Pages 업로드
+ZIP 자체를 올리지 말고 압축을 푼 뒤 내부 파일/폴더 전체를 저장소 루트에 업로드하세요.
+테스트 저장소에서는 Custom domain을 설정하지 않는 것을 권장합니다.
 
-## v1.1 디자인 수정
-- 이메일 mailto 링크 제거, 텍스트만 표시
-- TALKS 마지막 대형 검정 컨택 블록 제거
-- 컨택 영역을 간결한 카드형으로 변경
-- 기존 콘텐츠 유지
-- 대표작 표지에서 가져온 하늘색·레몬·코랄 계열을 포인트로 사용
-- 검정 면적과 과도하게 큰 명조 타이포를 줄이고 카드/라운드/여백 중심으로 정리
-- 모바일 레이아웃 보강
-
-
-## Final V2
-- 칼럼을 외부 기사 스크랩과 분리해 MY WRITING 영역으로 구성
-- 기존 COLUMN 데이터는 WRITING으로 분류
-- 기사·인터뷰·강연·수상·출간은 별도 Activity Archive로 유지
-- Works의 중복 '수록 도서' 섹션 삭제
-- 각 단편소설 항목에 실제 수록 도서 표지를 직접 연결
-- 문장웹진 발표작은 전문 읽기 링크를 직접 표시
-
-
-## Final V3
-- Archive를 COLUMN / MEDIA / HISTORY 세 구조로 재편
-- 국제신문 칼럼을 독립된 저자 콘텐츠로 분리
-- 실제 원문이 확인된 칼럼·기사만 외부 원문 링크 사용
-- 기존 식스샵 boardPost 링크 제거
-- 원문 미확인 항목은 클릭하지 않고 '링크 확인 중'으로 표시
-- 약력/선정/출간/번역/강연은 연도별 히스토리 타임라인으로 분리
-- 메인 Contact의 '연락이 필요하다면.' 문구 삭제
-
-
-## Final V4
-- 아카이브를 카드/검색/필터 없이 세로형 단일 흐름으로 재설계
-- 칼럼 / 기사·인터뷰 / 히스토리를 텍스트 중심 목록으로 통일
-- 외부 원문 링크가 있는 항목에만 ↗ 표시
-- 「플레이바우」 국제신문 원문 링크 반영
+## 모바일
+게임 조작을 요구하지 않습니다. 메인 비주얼 아래에 큰 세로형 메뉴가 바로 표시되어 모든 콘텐츠에 터치로 접근할 수 있습니다.
