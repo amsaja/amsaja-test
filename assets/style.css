@@ -1105,3 +1105,180 @@ footer{
     font-size:31px;
   }
 }
+
+
+/* =========================================================
+   FINAL V4 — linear archive
+   One continuous reading flow, fewer interaction points.
+   ========================================================= */
+.archive-linear-page{
+  background:#fbf8ef;
+}
+.linear-page{
+  max-width:1120px;
+  margin:0 auto;
+  padding:92px 32px 140px;
+}
+.linear-intro{
+  max-width:760px;
+  padding-bottom:92px;
+}
+.linear-intro h1{
+  font-family:Georgia,"Times New Roman","Noto Serif KR",serif;
+  font-size:clamp(58px,8vw,102px);
+  line-height:.95;
+  letter-spacing:-.055em;
+  margin:10px 0 28px;
+}
+.linear-intro>p:last-child{
+  max-width:600px;
+  color:var(--muted);
+  font-size:17px;
+  line-height:1.7;
+}
+.linear-section{
+  padding:68px 0 74px;
+  border-top:1px solid rgba(28,34,48,.2);
+}
+.linear-section-title{
+  display:grid;
+  grid-template-columns:180px 1fr auto;
+  gap:24px;
+  align-items:baseline;
+  margin-bottom:28px;
+}
+.linear-section-title .section-label{
+  grid-column:1;
+  margin:0;
+}
+.linear-section-title h2{
+  grid-column:2;
+  font-family:Georgia,"Times New Roman","Noto Serif KR",serif;
+  font-size:33px;
+  margin:0;
+}
+.linear-section-title>p:last-child{
+  grid-column:3;
+  margin:0;
+  color:var(--muted);
+  font-size:12px;
+}
+.linear-list{
+  border-top:1px solid rgba(28,34,48,.12);
+}
+.linear-row{
+  display:grid;
+  grid-template-columns:90px minmax(0,1fr) 220px 28px;
+  gap:24px;
+  align-items:baseline;
+  padding:18px 0;
+  border-bottom:1px solid rgba(28,34,48,.11);
+  transition:padding .16s ease, color .16s ease;
+}
+a.linear-row:hover{
+  padding-left:8px;
+  color:var(--accent);
+}
+.linear-date{
+  font-family:Georgia,serif;
+  color:var(--muted);
+  font-size:14px;
+}
+.linear-title{
+  font-family:Georgia,"Times New Roman","Noto Serif KR",serif;
+  font-size:19px;
+  line-height:1.45;
+}
+.linear-source{
+  justify-self:end;
+  text-align:right;
+  color:var(--muted);
+  font-size:12px;
+}
+.linear-arrow{
+  justify-self:end;
+  color:var(--accent);
+  font-size:15px;
+}
+.linear-row.no-link{
+  color:rgba(28,34,48,.67);
+}
+.linear-row.no-link .linear-arrow{
+  display:none;
+}
+
+/* history stays typographic, not article-like */
+.linear-history{
+  border-top:1px solid rgba(28,34,48,.12);
+}
+.linear-history-group{
+  display:grid;
+  grid-template-columns:180px 1fr;
+  gap:24px;
+  padding:28px 0 32px;
+  border-bottom:1px solid rgba(28,34,48,.11);
+}
+.linear-history-year{
+  font-family:Georgia,serif;
+  font-size:25px;
+  color:var(--deep);
+}
+.linear-history-items p{
+  margin:0;
+  padding:5px 0;
+  line-height:1.65;
+}
+.linear-history-items p:before{
+  content:"— ";
+  color:var(--accent);
+}
+
+/* Remove old archive visual systems from this page. */
+.archive-linear-page .my-writing-section,
+.archive-linear-page .archive-media,
+.archive-linear-page .archive-history,
+.archive-linear-page .archive-controls,
+.archive-linear-page .writing-grid,
+.archive-linear-page .media-list,
+.archive-linear-page .history-list{
+  display:none!important;
+}
+
+@media(max-width:800px){
+  .linear-page{padding:60px 22px 100px}
+  .linear-intro{padding-bottom:64px}
+  .linear-section{padding:48px 0 54px}
+  .linear-section-title{
+    grid-template-columns:1fr;
+    gap:6px;
+  }
+  .linear-section-title .section-label,
+  .linear-section-title h2,
+  .linear-section-title>p:last-child{
+    grid-column:1;
+  }
+  .linear-section-title>p:last-child{margin-top:4px}
+  .linear-row{
+    grid-template-columns:50px 1fr 22px;
+    gap:10px;
+    padding:16px 0;
+  }
+  .linear-source{
+    grid-column:2;
+    grid-row:2;
+    justify-self:start;
+    text-align:left;
+    font-size:11px;
+  }
+  .linear-arrow{
+    grid-column:3;
+    grid-row:1/3;
+    align-self:center;
+  }
+  .linear-title{font-size:17px}
+  .linear-history-group{
+    grid-template-columns:1fr;
+    gap:10px;
+  }
+  .linear-history-year{font-size:24px}
+}

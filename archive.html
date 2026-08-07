@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="김슬기 소설가의 칼럼, 인터뷰·기사와 주요 활동 히스토리.">
+<meta name="description" content="김슬기 소설가의 칼럼, 기사·인터뷰와 주요 활동 기록.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="아카이브 | 김슬기">
 <meta property="og:description" content="김슬기가 쓴 칼럼과 외부 미디어 기록, 주요 활동 히스토리.">
@@ -15,7 +15,7 @@
 <link rel="stylesheet" href="assets/style.css">
 <title>아카이브 | 김슬기</title>
 </head>
-<body class="archive-v3-page">
+<body class="archive-linear-page">
 <header class="site-header">
   <a class="brand" href="index.html">김슬기 <span>KIM SEULGI</span></a>
   <nav>
@@ -27,48 +27,43 @@
   </nav>
 </header>
 
-<main class="page archive-v3">
-  <header class="archive-intro">
+<main class="linear-page">
+  <header class="linear-intro">
     <p class="section-label">ARCHIVE</p>
-    <h1>쓰고, 발표하고,<br>계속 살아가는 기록.</h1>
-    <p class="page-lead">내가 직접 쓴 글, 외부 매체가 기록한 기사와 인터뷰, 그리고 작가로서의 주요 이력을 서로 다른 방식으로 정리했습니다.</p>
+    <h1>Archive</h1>
+    <p>쓴 글과 인터뷰, 기사, 그리고 작가로서의 주요 기록을 시간순으로 정리합니다.</p>
   </header>
 
-  <section class="archive-authored">
-    <div class="archive-section-head">
-      <div>
-        <p class="section-label">COLUMN</p>
-        <h2>내가 쓴 칼럼</h2>
-      </div>
-      <p>국제신문 ‘아침숲길’ 정기 칼럼</p>
+  <section class="linear-section">
+    <div class="linear-section-title">
+      <p class="section-label">COLUMN</p>
+      <h2>칼럼</h2>
+      <p>국제신문 ‘아침숲길’</p>
     </div>
-    <div id="column-list" class="column-list"></div>
+    <div id="column-list" class="linear-list"></div>
   </section>
 
-  <section class="archive-media">
-    <div class="archive-section-head">
-      <div>
-        <p class="section-label">MEDIA</p>
-        <h2>기사와 인터뷰</h2>
-      </div>
-      <p>원문을 확인한 기록은 ↗ 표시를 눌러 실제 매체 페이지에서 읽을 수 있습니다.</p>
+  <section class="linear-section">
+    <div class="linear-section-title">
+      <p class="section-label">PRESS & INTERVIEW</p>
+      <h2>기사와 인터뷰</h2>
     </div>
-    <div id="media-list" class="media-list"></div>
+    <div id="media-list" class="linear-list"></div>
   </section>
 
-  <section class="archive-history">
-    <div class="archive-section-head">
-      <div>
-        <p class="section-label">HISTORY</p>
-        <h2>작가 히스토리</h2>
-      </div>
-      <p>출간 · 등단 · 선정 · 번역 · 강연 등 주요 활동</p>
+  <section class="linear-section history-linear">
+    <div class="linear-section-title">
+      <p class="section-label">HISTORY</p>
+      <h2>히스토리</h2>
     </div>
-    <div id="history-list" class="history-list"></div>
+    <div id="history-list" class="linear-history"></div>
   </section>
 </main>
 
-<footer><div>© Kim Seulgi</div><div><a href="index.html">Home</a><a href="works.html">Works</a><a href="talks.html">Talks</a></div></footer>
-<script src="assets/archive-v3.js"></script>
+<footer>
+  <div>© Kim Seulgi</div>
+  <div><a href="index.html">Home</a><a href="works.html">Works</a><a href="talks.html">Talks</a></div>
+</footer>
+<script src="assets/archive-linear.js"></script>
 </body>
 </html>
