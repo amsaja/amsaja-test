@@ -25,15 +25,32 @@
 <main class="page archive-page">
   <p class="section-label">ARCHIVE</p>
   <h1>활동 기록</h1>
-  <p class="page-lead">기사, 인터뷰, 칼럼, 강연과 선정 이력을 한곳에 계속 누적합니다.</p>
+  <p class="page-lead">내가 쓴 글과, 나를 둘러싼 기사·인터뷰·강연·선정 기록을 구분해 모읍니다.</p>
 
-  <div class="archive-controls">
+  
+  <section class="my-writing-section">
+    <div class="section-heading split">
+      <div>
+        <p class="section-label">MY WRITING</p>
+        <h2>칼럼</h2>
+        <p class="writing-intro">신문과 매체에 직접 쓴 글. 기사 스크랩과 구분해 모아둡니다.</p>
+      </div>
+    </div>
+    <div id="writing-list" class="writing-grid"></div>
+  </section>
+
+  <section class="external-archive-heading">
+    <p class="section-label">ACTIVITY ARCHIVE</p>
+    <h2>기사 · 인터뷰 · 활동 기록</h2>
+  </section>
+
+<div class="archive-controls">
     <div class="archive-search-row"><input id="archive-search" type="search" placeholder="제목, 매체, 키워드 검색"><select id="archive-year"><option value="ALL">전체 연도</option><option>2026</option><option>2025</option><option>2024</option><option>2023</option><option>2018</option></select></div>
     <div id="archive-filters" class="filter-row">
       <button class="filter active" data-filter="ALL">ALL</button>
       <button class="filter" data-filter="PRESS">PRESS</button>
       <button class="filter" data-filter="INTERVIEW">INTERVIEW</button>
-      <button class="filter" data-filter="COLUMN">COLUMN</button>
+      
       <button class="filter" data-filter="TALK">TALK</button>
       <button class="filter" data-filter="AWARD">AWARD</button><button class="filter" data-filter="PUBLICATION">PUBLICATION</button>
     </div>
@@ -42,7 +59,7 @@
   <div id="archive-list" class="archive-list"></div>
 </main>
 
-<footer><div>© Kim Seulgi</div><div><a href="index.html">Home</a><a href="mailto:amsajabooks@naver.com">Contact</a></div></footer>
+<footer><div>© Kim Seulgi</div><div><a href="index.html">Home</a><span class="email-plain">Contact</span></div></footer>
 <script src="assets/archive.js"></script>
 </body>
 </html>

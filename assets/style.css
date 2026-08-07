@@ -276,3 +276,593 @@ body{word-break:keep-all}
   .archive-row h3{font-size:18px}
   .book-shelf{grid-template-columns:repeat(2,1fr)}
 }
+
+
+/* =========================================================
+   v1.1 — brighter, cleaner, more playful editorial direction
+   Inspired by the vitality of the featured novel cover
+   ========================================================= */
+
+:root{
+  --bg:#fbf8ef;
+  --paper:#fffdf7;
+  --ink:#1c2230;
+  --muted:#6b6a67;
+  --line:#ded8cc;
+  --accent:#ef5b45;
+  --sky:#8fd5ec;
+  --lemon:#f3e867;
+  --pink:#f5a6b9;
+  --deep:#21305d;
+}
+
+body{
+  background:
+    radial-gradient(circle at 88% 7%, rgba(143,213,236,.20), transparent 22%),
+    radial-gradient(circle at 8% 42%, rgba(243,232,103,.12), transparent 18%),
+    var(--bg);
+  color:var(--ink);
+}
+
+.site-header{
+  background:rgba(251,248,239,.91);
+  border-bottom:1px solid rgba(28,34,48,.08);
+}
+
+.brand{
+  letter-spacing:-.02em;
+}
+
+.brand:before{
+  content:"";
+  display:inline-block;
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  background:var(--accent);
+  margin-right:10px;
+  vertical-align:2px;
+}
+
+nav a{
+  font-weight:700;
+}
+
+.hero{
+  position:relative;
+  padding-top:88px;
+}
+
+.hero:before{
+  content:"";
+  position:absolute;
+  width:86px;
+  height:86px;
+  border-radius:50%;
+  background:var(--lemon);
+  left:-18px;
+  top:112px;
+  z-index:-1;
+  opacity:.85;
+}
+
+.hero:after{
+  content:"";
+  position:absolute;
+  width:130px;
+  height:26px;
+  border-radius:999px;
+  background:var(--sky);
+  right:26px;
+  bottom:78px;
+  transform:rotate(-8deg);
+  z-index:-1;
+  opacity:.8;
+}
+
+.hero h1{
+  font-size:clamp(48px,6.2vw,82px);
+  max-width:760px;
+}
+
+.hero-intro{
+  color:#4d5160;
+}
+
+.button.solid{
+  background:var(--deep);
+  border-radius:999px;
+  padding:14px 21px;
+}
+
+.button.text{
+  font-weight:700;
+}
+
+.social-inline a,
+.contact-social a{
+  border-bottom:1px solid transparent;
+}
+.social-inline a:hover,
+.contact-social a:hover{
+  border-bottom-color:currentColor;
+}
+
+.hero-photo.real-photo,
+.about-photo.real-photo,
+.talk-photo.real-photo,
+.talk-page-photo.real-photo{
+  border-radius:22px;
+  box-shadow:0 20px 50px rgba(31,48,93,.10);
+}
+
+.manifesto{
+  position:relative;
+  border-top:0;
+  padding-top:90px;
+  padding-bottom:90px;
+}
+
+.manifesto:before{
+  content:"";
+  display:block;
+  width:52px;
+  height:7px;
+  border-radius:99px;
+  background:var(--accent);
+  margin-bottom:28px;
+}
+
+.manifesto h2{
+  font-size:clamp(36px,4.7vw,60px);
+}
+
+.featured-work{
+  background:rgba(255,253,247,.66);
+  border:1px solid rgba(28,34,48,.07);
+  border-radius:28px;
+  padding:38px;
+}
+
+.book-cover.real-cover{
+  border-radius:10px;
+  background:transparent;
+  box-shadow:none;
+}
+
+.book-shelf{
+  background:linear-gradient(135deg,rgba(143,213,236,.22),rgba(243,232,103,.18));
+  border-radius:26px;
+}
+
+.work-card{
+  border-radius:20px;
+  border:1px solid rgba(28,34,48,.06);
+  box-shadow:none;
+}
+.work-card:nth-child(1){background:rgba(143,213,236,.16)}
+.work-card:nth-child(2){background:rgba(245,166,185,.13)}
+
+.now-band{
+  background:var(--deep);
+  border-radius:26px;
+  margin-left:auto;
+  margin-right:auto;
+  max-width:calc(var(--max) - 56px);
+  padding-left:34px;
+  padding-right:34px;
+}
+.now-band .section-label{color:var(--lemon)}
+.now-band a{font-weight:700}
+
+.talks{
+  gap:80px;
+}
+.talk-copy h2{
+  font-size:44px;
+}
+.talk-item{
+  border-top:1px solid rgba(28,34,48,.12);
+}
+.talk-item h3:before{
+  content:"●";
+  color:var(--accent);
+  font-size:9px;
+  vertical-align:4px;
+  margin-right:10px;
+}
+
+.human{
+  border-top:0;
+  position:relative;
+}
+.human:before{
+  content:"";
+  position:absolute;
+  width:120px;
+  height:120px;
+  background:var(--sky);
+  border-radius:34% 66% 58% 42% / 53% 46% 54% 47%;
+  opacity:.15;
+  right:3%;
+  top:6%;
+  z-index:-1;
+}
+
+.profile-cv>div{
+  border-bottom:1px solid rgba(28,34,48,.10);
+}
+
+.archive-preview{
+  gap:16px;
+}
+.archive-card{
+  border-radius:18px;
+  border:1px solid rgba(28,34,48,.06);
+  box-shadow:none;
+}
+.archive-card:nth-child(3n+1){background:rgba(143,213,236,.14)}
+.archive-card:nth-child(3n+2){background:rgba(243,232,103,.14)}
+.archive-card:nth-child(3n+3){background:rgba(245,166,185,.12)}
+
+/* Main contact — no giant dark block */
+.contact-light{
+  background:linear-gradient(135deg,rgba(143,213,236,.25),rgba(243,232,103,.22));
+  color:var(--ink);
+  padding-top:88px;
+  padding-bottom:88px;
+}
+.contact-light:before{
+  background:var(--accent);
+}
+.contact-grid{
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  gap:70px;
+  align-items:end;
+}
+.contact-light h2{
+  font-size:clamp(38px,5vw,62px);
+}
+.contact-details{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+  align-items:flex-start;
+}
+.email-plain{
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:27px;
+  margin:0;
+  word-break:break-all;
+}
+.contact-light .contact-social{
+  color:var(--ink);
+}
+
+/* Talks page */
+.talks-hero{
+  align-items:stretch;
+}
+.talk-programs article{
+  background:rgba(255,253,247,.7);
+  border:1px solid rgba(28,34,48,.07);
+  border-radius:18px;
+  padding:22px 24px;
+  margin-bottom:12px;
+}
+.talk-programs article>span{
+  display:inline-block;
+  background:var(--lemon);
+  color:var(--ink);
+  border-radius:999px;
+  padding:3px 8px;
+}
+.experience-group{
+  border-top:1px solid rgba(28,34,48,.12);
+}
+.talk-contact-simple{
+  max-width:var(--max);
+  margin:40px auto 0;
+  padding:44px 36px;
+  border-radius:24px;
+  background:linear-gradient(135deg,rgba(245,166,185,.20),rgba(143,213,236,.22));
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  align-items:end;
+}
+.talk-contact-simple h2{
+  font-family:Georgia,"Times New Roman","Noto Serif KR",serif;
+  font-size:34px;
+  margin:8px 0 10px;
+}
+.talk-contact-desc{
+  color:#525664;
+  margin:0;
+}
+.talk-contact-details{
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+  align-items:flex-start;
+}
+.talk-contact-details .contact-social{
+  color:var(--ink);
+}
+
+/* Works */
+.publication-grid article{
+  background:rgba(255,253,247,.72);
+  border-radius:18px;
+  padding:14px;
+  border:1px solid rgba(28,34,48,.06);
+}
+.publication-grid img{
+  border-radius:10px;
+  background:#f6f1e8;
+}
+
+/* Archive */
+.archive-controls input,
+.archive-search-row select{
+  border-bottom-color:rgba(28,34,48,.45);
+}
+.filter{
+  border-radius:999px;
+  background:rgba(255,255,255,.45);
+}
+.filter.active,.filter:hover{
+  background:var(--deep);
+}
+.archive-row{
+  border-bottom:1px solid rgba(28,34,48,.10);
+}
+.archive-row:hover{
+  background:rgba(143,213,236,.10);
+}
+
+footer{
+  background:var(--bg);
+}
+
+/* soften overly large serif on desktop */
+.page h1{
+  font-size:58px;
+}
+.experience-section>h2{
+  font-size:42px;
+}
+
+/* responsive */
+@media(max-width:800px){
+  .hero:before{width:56px;height:56px;left:-12px;top:78px}
+  .hero:after{display:none}
+  .featured-work{padding:22px}
+  .now-band{
+    border-radius:0;
+    max-width:none;
+    margin-left:0;
+    margin-right:0;
+  }
+  .contact-grid,
+  .talk-contact-simple{
+    grid-template-columns:1fr;
+    gap:28px;
+  }
+  .talk-contact-simple{
+    margin-left:18px;
+    margin-right:18px;
+    padding:30px 24px;
+  }
+  .email-plain{
+    font-size:20px;
+  }
+  .page h1{font-size:40px}
+}
+
+
+/* =========================================================
+   FINAL V2 — authored writing distinction + integrated fiction
+   ========================================================= */
+
+/* authored writing */
+.my-writing-section{
+  margin:70px 0 90px;
+  padding:38px;
+  border-radius:28px;
+  background:
+    radial-gradient(circle at 92% 10%, rgba(243,232,103,.45), transparent 18%),
+    linear-gradient(135deg,rgba(143,213,236,.23),rgba(255,253,247,.75));
+  border:1px solid rgba(28,34,48,.06);
+}
+.my-writing-section .section-heading{
+  margin-bottom:28px;
+}
+.my-writing-section h2,
+.external-archive-heading h2{
+  font-family:Georgia,"Times New Roman","Noto Serif KR",serif;
+  font-size:40px;
+  margin:8px 0 8px;
+}
+.writing-intro{
+  margin:0;
+  color:var(--muted);
+}
+.writing-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+}
+.writing-card{
+  background:rgba(255,253,247,.9);
+  border-radius:20px;
+  padding:24px;
+  min-height:220px;
+  border:1px solid rgba(28,34,48,.06);
+  display:flex;
+  flex-direction:column;
+  transition:transform .18s ease, box-shadow .18s ease;
+}
+.writing-card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 14px 32px rgba(31,48,93,.08);
+}
+.writing-top{
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+  color:var(--muted);
+  font-size:11px;
+  margin-bottom:26px;
+}
+.writing-card h3{
+  font-family:Georgia,"Times New Roman","Noto Serif KR",serif;
+  font-size:26px;
+  line-height:1.25;
+  margin:0 0 12px;
+}
+.writing-card p{
+  margin:0;
+  color:var(--muted);
+  font-size:14px;
+}
+.writing-read{
+  margin-top:auto;
+  padding-top:26px;
+  font-size:12px;
+  font-weight:700;
+  color:var(--accent);
+}
+.external-archive-heading{
+  margin:0 0 18px;
+}
+.archive-page .archive-controls{
+  margin-top:24px;
+}
+
+/* recent authored content gets a visual hint */
+.archive-card.is-writing{
+  background:linear-gradient(135deg,rgba(143,213,236,.20),rgba(243,232,103,.16));
+}
+.archive-card.is-writing .type{
+  color:var(--deep);
+}
+
+/* works — each short story owns its publication context */
+.works-section-intro{
+  color:var(--muted);
+  margin-top:-20px;
+  margin-bottom:34px;
+}
+.short-fiction-list{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+.fiction-card{
+  display:grid;
+  grid-template-columns:82px 1fr 112px;
+  gap:28px;
+  align-items:center;
+  min-height:154px;
+  padding:22px 24px;
+  border-radius:22px;
+  background:rgba(255,253,247,.78);
+  border:1px solid rgba(28,34,48,.07);
+  transition:transform .18s ease, background .18s ease;
+}
+.fiction-card:nth-child(3n+1){background:rgba(143,213,236,.12)}
+.fiction-card:nth-child(3n+2){background:rgba(243,232,103,.11)}
+.fiction-card:nth-child(3n+3){background:rgba(245,166,185,.10)}
+.fiction-card:hover{
+  transform:translateX(4px);
+}
+.fiction-year{
+  font-family:Georgia,serif;
+  font-size:24px;
+  color:var(--deep);
+  align-self:start;
+  padding-top:4px;
+}
+.fiction-copy h3{
+  font-family:Georgia,"Times New Roman","Noto Serif KR",serif;
+  font-size:25px;
+  line-height:1.25;
+  margin:0 0 8px;
+}
+.fiction-copy p{
+  margin:5px 0;
+  color:var(--muted);
+}
+.fiction-source{
+  color:var(--ink)!important;
+  font-size:14px;
+  font-weight:700;
+}
+.fiction-cover{
+  width:88px;
+  height:122px;
+  object-fit:contain;
+  justify-self:end;
+  background:#f6f1e8;
+  border-radius:7px;
+  box-shadow:0 10px 22px rgba(31,48,93,.10);
+}
+.fiction-medium{
+  justify-self:end;
+  display:grid;
+  place-items:center;
+  width:88px;
+  height:88px;
+  border-radius:50%;
+  background:var(--sky);
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.08em;
+}
+.fiction-card.no-cover:nth-child(even) .fiction-medium{
+  background:var(--lemon);
+}
+.web-badge{
+  background:var(--pink);
+}
+.fiction-link{
+  display:inline-block;
+  margin-top:10px;
+  color:var(--accent);
+  font-size:13px;
+  font-weight:700;
+}
+.fiction-link:hover{
+  text-decoration:underline;
+}
+
+/* hide legacy selected-covers styling if unused */
+.book-shelf:empty{display:none}
+
+@media(max-width:800px){
+  .writing-grid{
+    grid-template-columns:1fr;
+  }
+  .my-writing-section{
+    padding:26px 20px;
+    margin-top:45px;
+  }
+  .fiction-card{
+    grid-template-columns:58px 1fr 70px;
+    gap:14px;
+    padding:18px;
+  }
+  .fiction-year{font-size:19px}
+  .fiction-copy h3{font-size:20px}
+  .fiction-cover{
+    width:60px;
+    height:86px;
+  }
+  .fiction-medium{
+    width:58px;
+    height:58px;
+    font-size:8px;
+  }
+}
