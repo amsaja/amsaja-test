@@ -177,3 +177,111 @@ a:focus-visible,button:focus-visible{
   .talk-record strong{grid-column:1;font-size:14px}
   .talk-record em{grid-column:2;grid-row:1/3;align-self:center}
 }
+
+
+/* archive-rich update */
+.archive-rich-works .section-head{margin-bottom:42px}
+.rich-featured-book{align-items:start}
+.shop-link,
+.short-work-card a,
+.rich-essay-grid a{
+  display:inline-block;
+  margin-top:12px;
+  font-size:12px;
+  font-weight:900;
+  color:#aa4639;
+  border-bottom:1px solid currentColor;
+}
+.work-records{
+  margin-top:28px;
+  padding-top:20px;
+  border-top:1px solid rgba(25,33,43,.14);
+}
+.work-records h4{
+  margin:18px 0 7px;
+  font-family:Georgia,"Noto Serif KR",serif;
+  font-size:17px;
+}
+.work-records ul{padding-left:20px;margin:0}
+.work-records li{padding:4px 0;line-height:1.55}
+
+.short-work-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+}
+.short-work-card{
+  display:grid;
+  grid-template-columns:112px 1fr;
+  gap:20px;
+  align-items:start;
+  padding:20px;
+  border:1px solid rgba(25,33,43,.15);
+  background:rgba(255,250,236,.75);
+}
+.short-work-card img,
+.web-cover{
+  width:112px;
+  height:150px;
+  object-fit:contain;
+  background:#f3ecdd;
+  border:1px solid rgba(25,33,43,.12);
+}
+.web-cover{
+  display:grid;
+  place-items:center;
+  text-align:center;
+  font-family:Georgia,serif;
+  font-size:24px;
+  background:#dceaf0;
+}
+.web-cover small{font-family:Arial,sans-serif;font-size:11px}
+.short-work-card h4{
+  font-family:Georgia,"Noto Serif KR",serif;
+  font-size:21px;
+  margin:4px 0 7px;
+}
+.short-work-card p{margin:5px 0;color:var(--muted);line-height:1.55}
+.work-year{font-family:Georgia,serif;color:var(--green);font-size:13px}
+.work-desc{font-size:13px!important}
+.rich-essay-grid article{align-items:start}
+.rich-essay-grid p{color:var(--muted);font-size:13px;line-height:1.55}
+
+.talk-feature-photo{
+  margin:0 0 48px;
+}
+.talk-feature-photo img{
+  display:block;
+  width:100%;
+  max-height:520px;
+  object-fit:cover;
+  object-position:center;
+  border-radius:5px;
+}
+.talk-feature-photo figcaption{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  margin-top:9px;
+  color:var(--muted);
+  font-size:11px;
+}
+.talk-feature-photo figcaption span{
+  white-space:nowrap;
+}
+.talk-history-stack .history-block li strong{
+  font-weight:900;
+}
+.talk-history-stack .history-year{
+  font-size:25px;
+}
+
+@media(max-width:760px){
+  .short-work-grid{grid-template-columns:1fr}
+  .short-work-card{grid-template-columns:86px 1fr;gap:15px;padding:16px}
+  .short-work-card img,.web-cover{width:86px;height:118px}
+  .short-work-card h4{font-size:18px}
+  .talk-feature-photo img{max-height:none;aspect-ratio:4/3}
+  .talk-feature-photo figcaption{display:block;line-height:1.5}
+  .talk-feature-photo figcaption span{display:block;margin-top:3px}
+}
