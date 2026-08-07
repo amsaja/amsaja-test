@@ -1,65 +1,74 @@
 <!doctype html>
 <html lang="ko">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Archive | 김슬기</title>
-  <meta name="description" content="김슬기 소설가의 기사, 인터뷰, 칼럼, 강연, 수상·선정 및 출간 기록.">
-  
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="아카이브 | 김슬기">
-  <meta property="og:description" content="김슬기 소설가의 기사, 인터뷰, 칼럼, 강연, 수상·선정 및 출간 기록.">
-  <meta property="og:url" content="https://amsaja.kr/archive.html">
-  <meta property="og:image" content="https://amsaja.kr/assets/images/og-image.jpg">
-  <meta name="twitter:card" content="summary_large_image">
-  <link rel="canonical" href="https://amsaja.kr/archive.html">
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="김슬기 소설가의 칼럼, 인터뷰·기사와 주요 활동 히스토리.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="아카이브 | 김슬기">
+<meta property="og:description" content="김슬기가 쓴 칼럼과 외부 미디어 기록, 주요 활동 히스토리.">
+<meta property="og:url" content="https://amsaja.kr/archive.html">
+<meta property="og:image" content="https://amsaja.kr/assets/images/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://amsaja.kr/archive.html">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="assets/style.css">
+<title>아카이브 | 김슬기</title>
 </head>
-<body>
+<body class="archive-v3-page">
 <header class="site-header">
   <a class="brand" href="index.html">김슬기 <span>KIM SEULGI</span></a>
-  <nav><a href="index.html#works">WORKS</a><a href="index.html#talks">TALKS</a><a class="active" href="archive.html">ARCHIVE</a><a href="index.html#contact">CONTACT</a></nav>
+  <nav>
+    <a href="works.html">WORKS</a>
+    <a href="index.html#about">ABOUT</a>
+    <a href="talks.html">TALKS</a>
+    <a class="active" href="archive.html">ARCHIVE</a>
+    <a class="contact-link" href="index.html#contact">CONTACT</a>
+  </nav>
 </header>
 
-<main class="page archive-page">
-  <p class="section-label">ARCHIVE</p>
-  <h1>활동 기록</h1>
-  <p class="page-lead">내가 쓴 글과, 나를 둘러싼 기사·인터뷰·강연·선정 기록을 구분해 모읍니다.</p>
+<main class="page archive-v3">
+  <header class="archive-intro">
+    <p class="section-label">ARCHIVE</p>
+    <h1>쓰고, 발표하고,<br>계속 살아가는 기록.</h1>
+    <p class="page-lead">내가 직접 쓴 글, 외부 매체가 기록한 기사와 인터뷰, 그리고 작가로서의 주요 이력을 서로 다른 방식으로 정리했습니다.</p>
+  </header>
 
-  
-  <section class="my-writing-section">
-    <div class="section-heading split">
+  <section class="archive-authored">
+    <div class="archive-section-head">
       <div>
-        <p class="section-label">MY WRITING</p>
-        <h2>칼럼</h2>
-        <p class="writing-intro">신문과 매체에 직접 쓴 글. 기사 스크랩과 구분해 모아둡니다.</p>
+        <p class="section-label">COLUMN</p>
+        <h2>내가 쓴 칼럼</h2>
       </div>
+      <p>국제신문 ‘아침숲길’ 정기 칼럼</p>
     </div>
-    <div id="writing-list" class="writing-grid"></div>
+    <div id="column-list" class="column-list"></div>
   </section>
 
-  <section class="external-archive-heading">
-    <p class="section-label">ACTIVITY ARCHIVE</p>
-    <h2>기사 · 인터뷰 · 활동 기록</h2>
+  <section class="archive-media">
+    <div class="archive-section-head">
+      <div>
+        <p class="section-label">MEDIA</p>
+        <h2>기사와 인터뷰</h2>
+      </div>
+      <p>원문을 확인한 기록은 ↗ 표시를 눌러 실제 매체 페이지에서 읽을 수 있습니다.</p>
+    </div>
+    <div id="media-list" class="media-list"></div>
   </section>
 
-<div class="archive-controls">
-    <div class="archive-search-row"><input id="archive-search" type="search" placeholder="제목, 매체, 키워드 검색"><select id="archive-year"><option value="ALL">전체 연도</option><option>2026</option><option>2025</option><option>2024</option><option>2023</option><option>2018</option></select></div>
-    <div id="archive-filters" class="filter-row">
-      <button class="filter active" data-filter="ALL">ALL</button>
-      <button class="filter" data-filter="PRESS">PRESS</button>
-      <button class="filter" data-filter="INTERVIEW">INTERVIEW</button>
-      
-      <button class="filter" data-filter="TALK">TALK</button>
-      <button class="filter" data-filter="AWARD">AWARD</button><button class="filter" data-filter="PUBLICATION">PUBLICATION</button>
+  <section class="archive-history">
+    <div class="archive-section-head">
+      <div>
+        <p class="section-label">HISTORY</p>
+        <h2>작가 히스토리</h2>
+      </div>
+      <p>출간 · 등단 · 선정 · 번역 · 강연 등 주요 활동</p>
     </div>
-  </div>
-
-  <div id="archive-list" class="archive-list"></div>
+    <div id="history-list" class="history-list"></div>
+  </section>
 </main>
 
-<footer><div>© Kim Seulgi</div><div><a href="index.html">Home</a><span class="email-plain">Contact</span></div></footer>
-<script src="assets/archive.js"></script>
+<footer><div>© Kim Seulgi</div><div><a href="index.html">Home</a><a href="works.html">Works</a><a href="talks.html">Talks</a></div></footer>
+<script src="assets/archive-v3.js"></script>
 </body>
 </html>
