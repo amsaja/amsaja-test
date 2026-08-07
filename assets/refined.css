@@ -393,3 +393,179 @@ a:focus-visible,button:focus-visible{
 .media-archive-row[hidden]{
   display:none !important;
 }
+
+
+/* =========================================================
+   Brand structure edition
+   ========================================================= */
+.at-a-glance{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:10px;
+  margin-top:-26px;
+  margin-bottom:78px;
+}
+.glance-item{
+  min-height:118px;
+  padding:18px;
+  border-top:5px solid #2f2a23;
+  background:rgba(255,249,233,.72);
+}
+.glance-item>span{font-size:22px}
+.glance-item strong{
+  display:block;
+  margin-top:12px;
+  font-family:Georgia,"Noto Serif KR",serif;
+  font-size:16px;
+}
+.glance-item small{
+  display:block;
+  margin-top:5px;
+  color:var(--muted);
+  font-size:11px;
+  line-height:1.45;
+}
+
+/* grouped talks */
+.talk-category-tree{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:44px 38px;
+}
+.talk-category{
+  position:relative;
+  padding-left:24px;
+  border-left:2px solid rgba(25,33,43,.18);
+}
+.talk-category:before{
+  content:"";
+  position:absolute;
+  left:-5px;
+  top:4px;
+  width:8px;height:8px;
+  border-radius:50%;
+  background:var(--pink);
+}
+.talk-category-label{
+  display:flex;
+  gap:10px;
+  align-items:center;
+  margin-bottom:15px;
+}
+.talk-category-label span{font-size:21px}
+.talk-category-label h3{
+  margin:0;
+  font-family:Georgia,"Noto Serif KR",serif;
+  font-size:22px;
+}
+.talk-category-list>div{
+  padding:12px 0;
+  border-top:1px solid rgba(25,33,43,.12);
+}
+.talk-category-list strong{font-size:13px}
+.talk-category-list p{
+  margin:4px 0 0;
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.5;
+}
+
+/* History branches */
+.branch-tree{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:26px;
+}
+.branch{
+  position:relative;
+  min-height:100%;
+  padding:25px 26px 28px 31px;
+  border:1px solid rgba(25,33,43,.12);
+  background:rgba(255,249,233,.58);
+}
+.branch:before{
+  content:"";
+  position:absolute;
+  left:0;top:0;bottom:0;
+  width:6px;
+}
+.branch-publication:before{background:#52793b}
+.branch-award:before{background:#db8b30}
+.branch-global:before{background:#559ac7}
+.branch-activity:before{background:#7a61a5}
+.branch-title{
+  display:flex;
+  gap:11px;
+  align-items:center;
+  margin-bottom:17px;
+}
+.branch-title span{font-size:22px}
+.branch-title h3{
+  margin:0;
+  font-family:Georgia,"Noto Serif KR",serif;
+  font-size:24px;
+}
+.branch-items{
+  position:relative;
+  padding-left:18px;
+}
+.branch-items:before{
+  content:"";
+  position:absolute;
+  left:3px;top:5px;bottom:5px;
+  width:1px;
+  background:rgba(25,33,43,.2);
+}
+.branch-items>div{
+  position:relative;
+  display:grid;
+  grid-template-columns:52px 1fr;
+  gap:10px;
+  padding:8px 0;
+}
+.branch-items>div:before{
+  content:"";
+  position:absolute;
+  left:-18px;
+  top:15px;
+  width:7px;height:7px;
+  border-radius:50%;
+  background:#f8f1df;
+  border:2px solid #4f473d;
+}
+.branch-items b{
+  font-family:Georgia,serif;
+  font-size:12px;
+  color:var(--muted);
+}
+.branch-items p{
+  margin:0;
+  font-size:13px;
+  line-height:1.5;
+}
+
+/* PRESS becomes a quieter appendix-like section */
+#press{
+  margin-top:28px;
+}
+#press .section-head{
+  margin-bottom:30px;
+}
+#press .stage-badge{
+  opacity:.8;
+}
+
+@media(max-width:760px){
+  .at-a-glance{
+    grid-template-columns:1fr 1fr;
+    margin-top:0;
+    margin-bottom:55px;
+  }
+  .glance-item{min-height:106px;padding:15px}
+  .talk-category-tree,
+  .branch-tree{
+    grid-template-columns:1fr;
+  }
+  .talk-category-tree{gap:30px}
+  .branch{padding:21px 20px 23px 26px}
+}
