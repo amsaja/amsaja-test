@@ -2,9 +2,9 @@
   "profile": {
     "name_ko": "김슬기",
     "name_en": "Kim Seulgi",
-    "roles": "Novelist, Writer",
-    "summary": "2024년 국제신문 신춘문예 단편소설 부문으로 등단했습니다. 장편소설 『강하고 아름다운 할머니가 되고 싶어』를 비롯해 단편소설과 에세이를 씁니다.",
-    "focus": "노동의 현장과 자본주의의 이면, 주거 문제와 그 안에서 살아가는 사람들에게 관심이 있습니다. 오래 읽히는 재미있는 소설을 쓰고 싶습니다.",
+    "roles": "소설가 · 작가",
+    "summary": "2024년 국제신문 신춘문예 단편소설 부문으로 등단했습니다. 대표작 장편소설 『강하고 아름다운 할머니가 되고 싶어』를 비롯해 단편소설과 에세이, 칼럼을 발표했습니다.",
+    "focus": "노동의 현장과 자본주의의 이면, 주거 문제와 그 안에서 고군분투 하며 살아가는 사람들에게 관심이 있습니다. 오래 읽히는 재미있는 소설을 쓰고 싶습니다.",
     "location": "Seoul, Republic of Korea",
     "email": "amsajabooks@naver.com",
     "instagram": "https://instagram.com/hit_seul",
@@ -14,37 +14,37 @@
     {
       "year": "2026",
       "title": "서울국제도서전 ‘한국에서 가장 재미있는 책’",
-      "type": "Selection",
+      "type": "선정",
       "detail": "『강하고 아름다운 할머니가 되고 싶어』"
     },
     {
       "year": "2026",
       "title": "문학나눔 도서 보급 사업",
-      "type": "Selection",
+      "type": "선정",
       "detail": "『강하고 아름다운 할머니가 되고 싶어』"
     },
     {
       "year": "2026",
       "title": "국제신문 ‘아침숲길’ 정기 필진",
-      "type": "Column",
+      "type": "칼럼",
       "detail": ""
     },
     {
       "year": "2025",
       "title": "『강하고 아름다운 할머니가 되고 싶어』 출간",
-      "type": "Publication",
+      "type": "출간",
       "detail": "클레이하우스"
     },
     {
       "year": "2024",
       "title": "제12회 브런치북 출판 프로젝트 소설 부문 대상",
-      "type": "Award",
+      "type": "수상",
       "detail": ""
     },
     {
       "year": "2024",
       "title": "국제신문 신춘문예 단편소설 부문 당선",
-      "type": "Debut",
+      "type": "등단",
       "detail": "「공존」"
     }
   ],
@@ -53,21 +53,21 @@
       {
         "year": "2025",
         "title": "강하고 아름다운 할머니가 되고 싶어",
-        "type": "Novel",
+        "type": "장편소설",
         "publisher": "클레이하우스",
         "url": "https://search.kyobobook.co.kr/search?keyword=%EA%B0%95%ED%95%98%EA%B3%A0%20%EC%95%84%EB%A6%84%EB%8B%A4%EC%9A%B4%20%ED%95%A0%EB%A8%B8%EB%8B%88%EA%B0%80%20%EB%90%98%EA%B3%A0%20%EC%8B%B6%EC%96%B4"
       },
       {
         "year": "2023",
         "title": "내가 좋아하는 것들, 소설",
-        "type": "Essay",
+        "type": "에세이",
         "publisher": "스토리닷",
         "url": "https://search.kyobobook.co.kr/search?keyword=%EB%82%B4%EA%B0%80%20%EC%A2%8B%EC%95%84%ED%95%98%EB%8A%94%20%EA%B2%83%EB%93%A4%2C%20%EC%86%8C%EC%84%A4"
       },
       {
         "year": "2018",
         "title": "금요일 퇴사 화요일 몽골",
-        "type": "Essay",
+        "type": "에세이",
         "publisher": "암사자북스",
         "url": "https://search.kyobobook.co.kr/search?keyword=%EA%B8%88%EC%9A%94%EC%9D%BC%20%ED%87%B4%EC%82%AC%20%ED%99%94%EC%9A%94%EC%9D%BC%20%EB%AA%BD%EA%B3%A8"
       }
@@ -107,7 +107,8 @@
         "year": "2023",
         "title": "변온동물",
         "publication": "암사자북스 · 독립출판",
-        "url": ""
+        "url": "",
+        "status": "절판"
       }
     ]
   },
@@ -156,17 +157,19 @@
   "translations": [
     {
       "year": "2026",
-      "language": "Russian",
+      "language": "러시아어",
       "title": "Три бабушки спасли меня от смерти",
       "publisher": "Eksmo / Bombora",
-      "status": "Published"
+      "status": "출간",
+      "original_title": "강하고 아름다운 할머니가 되고 싶어"
     },
     {
       "year": "2026",
-      "language": "Indonesian",
+      "language": "인도네시아어",
       "title": "『강하고 아름다운 할머니가 되고 싶어』",
       "publisher": "",
-      "status": "Forthcoming"
+      "status": "출간 예정",
+      "original_title": "강하고 아름다운 할머니가 되고 싶어"
     }
   ],
   "blurbs": [
@@ -246,8 +249,15 @@
       "label": "학교 · 교육기관",
       "items": [
         {
+          "year": "2026",
           "place": "의정부 송양고등학교",
-          "title": "「쓰는 나, 만드는 나」 소설 쓰기와 독립 출판",
+          "title": "「쓰는 나, 만드는 나」 2026 — 소설 쓰기와 독립 출판",
+          "detail": "강연"
+        },
+        {
+          "year": "2025",
+          "place": "의정부 송양고등학교",
+          "title": "「쓰는 나, 만드는 나」 — 소설 쓰기와 독립 출판",
           "detail": "2회"
         },
         {
@@ -294,70 +304,70 @@
     {
       "date": "2026.07.27",
       "source": "디지털타임스",
-      "type": "Article",
+      "type": "기사",
       "title": "“소설은 담고, 경제·자기계발서는 밑줄”…밀리의서재가 분석한 독서 트렌드",
       "url": "https://v.daum.net/v/20260727112609557"
     },
     {
       "date": "2026.07.02",
       "source": "경기헤럴드",
-      "type": "Article",
+      "type": "기사",
       "title": "의왕시, 시민과 함께하는 ‘서(書)로 통하다’ 연계 행사 운영",
       "url": "https://www.koreasafetynews.com/news/articleView.html?idxno=237490"
     },
     {
       "date": "2026.06.24",
       "source": "쿠키뉴스",
-      "type": "Article",
+      "type": "기사",
       "title": "국내 최대 규모 책 축제 ‘2026 서울국제도서전’ 개막 D-7…올해 주제는 ‘인간선언 Homo duduri’",
       "url": "https://www.kukinews.com/article/view/kuk202606170145"
     },
     {
       "date": "2026.04.21",
       "source": "뉴시스",
-      "type": "Article",
+      "type": "기사",
       "title": "출협, 서울국제도서전 앞두고 ‘한국에서 가장 좋은 책’ 40종 발표",
       "url": "https://www.newsis.com/view/NISX20260421_0003600635"
     },
     {
       "date": "2026.04.17",
       "source": "충남일보",
-      "type": "Article",
+      "type": "기사",
       "title": "서천도서관, 도서관주간 맞아 ‘김슬기 작가와의 만남’ 성료",
       "url": "https://www.chungnamilbo.co.kr/news/articleView.html?idxno=883930"
     },
     {
       "date": "2026.03.21",
       "source": "금강일보",
-      "type": "Article",
+      "type": "기사",
       "title": "서천도서관, 김슬기 작가 초청 ‘작가와의 만남’ 운영",
       "url": "https://www.ggilbo.com/news/articleView.html?idxno=1146323"
     },
     {
       "date": "2026.03.01",
       "source": "인천광역시교육청",
-      "type": "News",
+      "type": "소식",
       "title": "중앙저자학교 김슬기 소설가 강의 ‘나의 첫 짧은 소설 쓰기’ 운영",
       "url": "https://ice.go.kr/ice/na/ntt/selectNttInfo.do?mi=&nttSn=3362265"
     },
     {
       "date": "2026.01.29",
       "source": "CEO저널",
-      "type": "Interview",
+      "type": "인터뷰",
       "title": "김슬기 소설가 [문화IN]",
       "url": "https://www.ceojhn.com/news/articleView.html?idxno=9245"
     },
     {
       "date": "2025.12.31",
       "source": "국제신문",
-      "type": "Article",
+      "type": "기사",
       "title": "2026년 더 풍성해진 국제신문…새 필진·기획이 새 아침 엽니다",
       "url": "https://www.kookje.co.kr/news2011/asp/newsbody.asp?code=1800&key=20260101.22002007762"
     },
     {
       "date": "2025.08.07",
       "source": "국제신문",
-      "type": "Interview",
+      "type": "인터뷰",
       "title": "등단 1년 반 만에 장편소설 낸 ‘괴력’…그 에너지가 작품에 담겼다",
       "url": "https://v.daum.net/v/FOXReKvavY?f=p"
     }
