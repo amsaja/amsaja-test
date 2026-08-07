@@ -285,3 +285,105 @@ a:focus-visible,button:focus-visible{
   .talk-feature-photo figcaption{display:block;line-height:1.5}
   .talk-feature-photo figcaption span{display:block;margin-top:3px}
 }
+
+
+/* short fiction v2 — same visual system as essay cards */
+.short-fiction-grid article{
+  display:grid;
+  grid-template-columns:90px minmax(0,1fr);
+  gap:18px;
+  align-items:start;
+  padding:20px;
+  border:2px solid #30291f;
+  background:#fff9e9;
+}
+.short-fiction-grid img,
+.publication-icon{
+  width:90px;
+  height:120px;
+  object-fit:contain;
+}
+.publication-icon{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:9px;
+  border:1px solid rgba(25,33,43,.18);
+  background:#e9e2d3;
+  color:#4f493f;
+}
+.publication-icon.web{
+  background:#dceaf0;
+}
+.publication-icon span{
+  font-family:Georgia,serif;
+  font-size:31px;
+  line-height:1;
+}
+.publication-icon small{
+  font-size:8px!important;
+  font-weight:900;
+  letter-spacing:.08em;
+  color:#6c6458!important;
+}
+.short-fiction-grid .work-year{
+  display:block;
+  margin-bottom:5px;
+  font-family:Georgia,serif;
+  color:var(--green);
+  font-size:12px;
+}
+.short-fiction-grid strong{
+  display:block;
+  font-family:Georgia,"Noto Serif KR",serif;
+  font-size:18px;
+  line-height:1.4;
+}
+.short-fiction-grid small{
+  display:block;
+  margin-top:7px;
+  color:var(--muted);
+  line-height:1.5;
+}
+.short-fiction-grid p{
+  margin:8px 0 0;
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.55;
+}
+.short-fiction-grid a{
+  display:inline-block;
+  margin-top:11px;
+  color:#aa4639;
+  font-size:12px;
+  font-weight:900;
+  border-bottom:1px solid currentColor;
+}
+
+/* neutralize the abandoned short-work-card layout */
+.short-work-grid{display:none}
+
+@media(max-width:720px){
+  .short-fiction-grid article{
+    grid-template-columns:76px minmax(0,1fr);
+    gap:14px;
+    padding:16px;
+  }
+  .short-fiction-grid img,
+  .publication-icon{
+    width:76px;
+    height:102px;
+  }
+  .short-fiction-grid strong{font-size:16px}
+}
+
+/* news archive source cleanup */
+.media-no-link{
+  color:#9c9285;
+  font-size:10px;
+  font-weight:800;
+}
+.media-link{
+  white-space:nowrap;
+}
