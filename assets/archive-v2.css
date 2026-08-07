@@ -1,0 +1,263 @@
+
+/* =========================================================
+   KIM SEULGI ARCHIVE v2.0
+   Editorial, quiet, durable.
+   ========================================================= */
+
+:root{
+  --archive-bg:#f7f0de;
+  --archive-ink:#1d2329;
+  --archive-line:rgba(29,35,41,.16);
+}
+body.singlepage-site{background:var(--archive-bg)}
+
+/* quiet opening */
+.archive-hero{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 156px;
+  gap:68px;
+  align-items:end;
+  min-height:520px;
+  padding-top:118px;
+  padding-bottom:112px;
+}
+.archive-hero h1{
+  margin:8px 0 28px;
+  font-size:clamp(68px,10vw,128px);
+  letter-spacing:-.06em;
+  line-height:.88;
+}
+.archive-quote{
+  max-width:700px;
+  margin:0 0 28px;
+  font-family:Georgia,"Noto Serif KR",serif;
+  font-size:clamp(25px,3.2vw,40px);
+  line-height:1.42;
+}
+.archive-hero .intro-sub{max-width:680px}
+.archive-profile{
+  width:156px;
+  margin:0;
+}
+.archive-profile img{
+  width:100%;
+  aspect-ratio:4/5;
+  object-fit:cover;
+  border-radius:3px;
+  border:0;
+  filter:grayscale(.08) saturate(.85);
+}
+.archive-profile:after{display:none}
+
+/* counts instead of explanatory promo cards */
+.archive-counts{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  border-top:1px solid var(--archive-line);
+  border-bottom:1px solid var(--archive-line);
+  margin-bottom:116px;
+}
+.archive-counts>div{
+  padding:26px 0 28px;
+  border-right:1px solid var(--archive-line);
+}
+.archive-counts>div:last-child{border-right:0}
+.archive-counts span{
+  display:block;
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:.12em;
+  color:var(--muted);
+}
+.archive-counts strong{
+  display:block;
+  margin-top:10px;
+  font-family:Georgia,serif;
+  font-size:40px;
+  font-weight:400;
+}
+
+/* headings: less explanation, more editorial space */
+.long-section{padding-top:108px;padding-bottom:112px}
+.section-head{
+  margin-bottom:58px;
+  gap:24px;
+}
+.section-head .stage-badge{
+  width:66px;
+  height:66px;
+  font-size:21px;
+  box-shadow:none;
+  border-width:1px;
+}
+.section-head h2{
+  font-size:clamp(39px,5vw,60px);
+  letter-spacing:-.035em;
+}
+.section-head p{
+  margin-bottom:9px;
+  color:var(--muted);
+}
+
+/* Works feel editorial, not shop-like */
+.rich-featured-book,
+.featured-book{
+  box-shadow:none!important;
+  border-width:1px!important;
+}
+.shop-link,
+.short-fiction-grid a,
+.rich-essay-grid a{
+  border-bottom:0!important;
+}
+.shop-link:after,
+.short-fiction-grid a:after,
+.rich-essay-grid a:after{content:"  →"}
+
+/* Talks - the image leads */
+.talk-feature-photo{
+  width:min(100%,880px);
+  margin-bottom:66px;
+}
+.talk-feature-photo img{
+  border-radius:0!important;
+}
+.talk-category-tree{gap:54px 44px}
+
+/* history as a branching archive */
+.branch-tree{
+  position:relative;
+  gap:34px;
+}
+.branch{
+  border:0!important;
+  border-top:1px solid var(--archive-line)!important;
+  background:transparent!important;
+  padding:30px 10px 34px 34px!important;
+}
+.branch:before{width:3px!important}
+.branch-title h3{font-size:27px}
+.branch-items:before{background:rgba(29,35,41,.16)!important}
+.branch-items>div{padding:10px 0}
+
+/* Press: deliberately quieter, appendix-like */
+#press{
+  border-top:1px solid var(--archive-line);
+}
+#press .section-head .stage-badge{
+  background:#687078!important;
+}
+.media-archive-row{
+  min-height:90px;
+}
+.media-copy strong{font-weight:500}
+
+/* simple contact */
+.archive-contact{
+  padding-top:108px;
+  padding-bottom:118px;
+}
+.contact-simple-list{
+  border-top:1px solid rgba(255,255,255,.25);
+  max-width:760px;
+}
+.contact-simple-list>div,
+.contact-simple-list>a{
+  display:grid;
+  grid-template-columns:130px 1fr;
+  gap:28px;
+  padding:20px 0;
+  border-bottom:1px solid rgba(255,255,255,.2);
+}
+.contact-simple-list span{
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:.1em;
+  opacity:.6;
+}
+.contact-simple-list strong{
+  font-family:Georgia,"Noto Serif KR",serif;
+  font-size:20px;
+  font-weight:400;
+}
+.contact-simple-list a:hover strong{color:#f1cc5a}
+
+/* footer as archive metadata */
+.archive-footer{
+  display:grid!important;
+  grid-template-columns:1fr auto auto;
+  align-items:end;
+  gap:36px;
+}
+.archive-footer>div:first-child{
+  display:flex;
+  flex-direction:column;
+  gap:5px;
+}
+.archive-footer>div:first-child strong{font-size:11px;letter-spacing:.1em}
+.archive-footer>div:first-child span{font-size:11px;opacity:.65}
+.archive-updated{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-end;
+  gap:4px;
+}
+.archive-updated span{font-size:9px;opacity:.55;text-transform:uppercase;letter-spacing:.1em}
+.archive-updated strong{font-family:Georgia,serif;font-size:12px}
+
+/* keep floating nav as playful signature, not the page itself */
+.floating-dock{
+  background:rgba(247,240,222,.96)!important;
+}
+
+@media(max-width:760px){
+  .archive-hero{
+    grid-template-columns:1fr;
+    gap:26px;
+    min-height:0;
+    padding-top:72px;
+    padding-bottom:70px;
+  }
+  .archive-profile{
+    width:96px;
+    order:-1;
+    margin-left:auto;
+  }
+  .archive-profile img{
+    aspect-ratio:1/1;
+    border-radius:50%;
+  }
+  .archive-hero h1{
+    font-size:64px;
+    margin-bottom:23px;
+  }
+  .archive-quote{font-size:24px}
+  .archive-counts{
+    grid-template-columns:1fr 1fr;
+    margin-bottom:70px;
+  }
+  .archive-counts>div{
+    border-bottom:1px solid var(--archive-line);
+  }
+  .archive-counts>div:nth-child(2){border-right:0}
+  .archive-counts>div:nth-last-child(-n+2){border-bottom:0}
+  .archive-counts strong{font-size:32px}
+  .long-section{padding-top:76px;padding-bottom:78px}
+  .section-head{margin-bottom:38px}
+  .section-head .stage-badge{width:50px;height:50px;font-size:16px}
+  .section-head h2{font-size:38px}
+  .archive-footer{
+    grid-template-columns:1fr auto;
+  }
+  .archive-updated{
+    grid-column:1;
+    grid-row:2;
+    align-items:flex-start;
+  }
+  .contact-simple-list>div,
+  .contact-simple-list>a{
+    grid-template-columns:90px 1fr;
+    gap:16px;
+  }
+  .contact-simple-list strong{font-size:17px}
+}
