@@ -183,3 +183,24 @@ footer{
   font-style:normal;
   font-weight:400;
 }
+
+
+/* final data-split edition */
+.summary{
+  font-size:clamp(20px,2.45vw,28px);
+  line-height:1.55;
+  max-width:690px;
+  margin-bottom:20px;
+}
+.focus{
+  max-width:690px;
+  font-size:14px;
+  line-height:1.7;
+}
+.data-error{
+  width:min(calc(100% - 48px),920px);
+  margin:20px auto;
+  padding:14px 0;
+  color:#9d392d;
+  font-size:13px;
+}

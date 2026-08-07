@@ -1,54 +1,108 @@
 
 const $ = (id) => document.getElementById(id);
-const external = (url, text) => url
-  ? `<a href="${url}" target="_blank" rel="noopener">${text}</a>`
-  : text;
+
+const DATA_FILES = {
+  profile: "data/profile.json",
+  selected: "data/selected.json",
+  works: "data/works.json",
+  awards: "data/awards.json",
+  translations: "data/translations.json",
+  blurbs: "data/blurbs.json",
+  columns: "data/columns.json",
+  talks: "data/talks.json",
+  press: "data/press.json",
+  meta: "data/meta.json"
+};
+
+async function loadJSON(path) {
+  // GitHub Pages/CDN/browser caching can otherwise delay data-only updates.
+  const response = await fetch(path, { cache: "no-store" });
+  if (!response.ok) throw new Error(`${path} 불러오기 실패: ${response.status}`);
+  return response.json();
+}
+
+function external(url, text) {
+  return url
+    ? `<a href="${url}" target="_blank" rel="noopener">${text}</a>`
+    : text;
+}
 
 function row({year="", title="", sub="", right="", url=""}) {
   return `<div class="row ${url ? "linked" : ""}">
     <span class="year">${year}</span>
-    <span class="main"><span class="title">${external(url,title)}</span>${sub ? `<span class="sub">${sub}</span>` : ""}</span>
-    <span class="right">${right || (url ? "Open ↗" : "")}</span>
+    <span class="main">
+      <span class="title">${external(url, title)}</span>
+      ${sub ? `<span class="sub">${sub}</span>` : ""}
+    </span>
+    <span class="right">${right || (url ? "보기 ↗" : "")}</span>
   </div>`;
 }
 
-fetch("data/site.json")
-  .then(r => {
-    if (!r.ok) throw new Error("site.json load failed");
-    return r.json();
-  })
-  .then(d => {
-    $("name").textContent = d.profile.name_ko;
-    $("roles").textContent = d.profile.roles;
-    $("summary").textContent = d.profile.summary;
-    $("focus").textContent = d.profile.focus;
-    $("location").textContent = d.profile.location;
-    $("email").textContent = d.profile.email;
-    $("instagram").href = d.profile.instagram;
-    $("blog").href = d.profile.blog;
-    $("social-instagram").href = d.profile.instagram;
-    $("social-blog").href = d.profile.blog;
+async function renderSite() {
+  try {
+    const [
+      profile,
+      selected,
+      works,
+      awards,
+      translations,
+      blurbs,
+      columns,
+      talks,
+      press,
+      meta
+    ] = await Promise.all([
+      loadJSON(DATA_FILES.profile),
+      loadJSON(DATA_FILES.selected),
+      loadJSON(DATA_FILES.works),
+      loadJSON(DATA_FILES.awards),
+      loadJSON(DATA_FILES.translations),
+      loadJSON(DATA_FILES.blurbs),
+      loadJSON(DATA_FILES.columns),
+      loadJSON(DATA_FILES.talks),
+      loadJSON(DATA_FILES.press),
+      loadJSON(DATA_FILES.meta)
+    ]);
 
-    $("selected-list").innerHTML = d.selected_activities.map(x => row({
-      year:x.year, title:x.title, sub:x.detail, right:x.type
+    // 소개
+    $("name").textContent = profile.name_ko;
+    $("roles").textContent = profile.roles;
+    $("summary").textContent = profile.summary;
+    $("focus").textContent = profile.focus;
+    $("location").textContent = profile.location;
+    $("email").textContent = profile.email;
+    $("instagram").href = profile.instagram;
+    $("blog").href = profile.blog;
+    $("social-instagram").href = profile.instagram;
+    $("social-blog").href = profile.blog;
+
+    // 주요 활동
+    $("selected-list").innerHTML = selected.map(x => row({
+      year:x.year,
+      title:x.title,
+      sub:x.detail || "",
+      right:x.type || ""
     })).join("");
 
-    $("blurbs-list").innerHTML = d.blurbs.map(x => {
-      const sub = [x.author, x.publisher].filter(Boolean).join(" · ");
-      return row({
-        year:x.year,
-        title:x.title,
-        sub:sub,
-        right:x.role || "추천사",
-        url:x.url
-      });
-    }).join("");
-
-    $("books").innerHTML = d.works.books.map(x => row({
-      year:x.year, title:x.title, sub:x.publisher, right:x.type, url:x.url
+    // 단행본
+    $("books").innerHTML = (works.books || []).map(x => row({
+      year:x.year,
+      title:x.title,
+      sub:x.publisher,
+      right:x.type,
+      url:x.url
     })).join("");
 
-    $("short-fiction").innerHTML = d.works.short_fiction.map(x => row({
+    // 해외 번역판
+    $("translations-list").innerHTML = translations.map(x => row({
+      year:x.year,
+      title:x.title,
+      sub:[`원작 『${x.original_title}』`, x.language, x.publisher].filter(Boolean).join(" · "),
+      right:x.status
+    })).join("");
+
+    // 단편소설
+    $("short-fiction").innerHTML = (works.short_fiction || []).map(x => row({
       year:x.year,
       title:`「${x.title}」`,
       sub:x.publication,
@@ -56,26 +110,37 @@ fetch("data/site.json")
       url:x.url
     })).join("");
 
-    $("awards-list").innerHTML = d.awards.map(x => row({
-      year:x.year, title:x.title, right:x.result
-    })).join("");
-
-    $("translations-list").innerHTML = d.translations.map(x => row({
+    // 수상 및 선정
+    $("awards-list").innerHTML = awards.map(x => row({
       year:x.year,
       title:x.title,
-      sub:[`원작 『${x.original_title}』`, x.language, x.publisher].filter(Boolean).join(" · "),
-      right:x.status
+      right:x.result
     })).join("");
 
-    $("columns-list").innerHTML = d.columns.map(x => row({
-      year:x.date.slice(0,4), title:x.title, sub:x.publication, right:"읽기 ↗", url:x.url
+    // 추천사
+    $("blurbs-list").innerHTML = blurbs.map(x => row({
+      year:x.year,
+      title:`『${x.title}』`,
+      sub:[x.author, x.publisher].filter(Boolean).join(" · "),
+      right:x.role || "추천사",
+      url:x.url
     })).join("");
 
-    $("talks-list").innerHTML = d.talks.map(g => `
+    // 칼럼
+    $("columns-list").innerHTML = columns.map(x => row({
+      year:x.date.slice(0,4),
+      title:x.title,
+      sub:x.publication,
+      right:"읽기 ↗",
+      url:x.url
+    })).join("");
+
+    // 강연과 수업
+    $("talks-list").innerHTML = talks.map(group => `
       <div class="talk-group">
-        <h3>${g.label}</h3>
+        <h3>${group.label}</h3>
         <div class="talk-list">
-          ${g.items.map(x => `<div class="talk-item">
+          ${(group.items || []).map(x => `<div class="talk-item">
             <span class="talk-place">${x.year ? `<em class="talk-year">${x.year}</em>` : ""}${x.place}</span>
             <span class="talk-title">${x.title}</span>
             <span class="talk-detail">${x.detail || ""}</span>
@@ -83,14 +148,24 @@ fetch("data/site.json")
         </div>
       </div>`).join("");
 
-    $("press-list").innerHTML = d.press.map(x => row({
-      year:x.date.slice(0,4), title:x.title, sub:`${x.source} · ${x.type}`, right:"읽기 ↗", url:x.url
+    // 기사와 인터뷰
+    $("press-list").innerHTML = press.map(x => row({
+      year:x.date.slice(0,4),
+      title:x.title,
+      sub:`${x.source} · ${x.type}`,
+      right:"읽기 ↗",
+      url:x.url
     })).join("");
 
-    $("updated").textContent = `마지막 업데이트 ${d.updated}`;
-  })
-  .catch(err => {
+    $("updated").textContent = `마지막 업데이트 ${meta.updated}`;
+
+  } catch (err) {
     console.error(err);
-    document.body.insertAdjacentHTML("beforeend",
-      '<p style="max-width:920px;margin:20px auto;color:#a33">콘텐츠 파일을 불러오지 못했습니다.</p>');
-  });
+    document.body.insertAdjacentHTML(
+      "beforeend",
+      '<p class="data-error">홈페이지 콘텐츠를 불러오지 못했습니다. 잠시 후 새로고침해 주세요.</p>'
+    );
+  }
+}
+
+renderSite();

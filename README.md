@@ -1,78 +1,81 @@
-# Kim Seulgi — Clean Archive v1.1
+# 김슬기 공식 홈페이지 — Clean Archive FINAL
 
-## 구조
-ABOUT / CONTACT
-→ SELECTED ACTIVITIES
-→ WORK
-→ AWARDS & SELECTIONS
-→ TRANSLATED EDITIONS
-→ BLURBS / 추천사
-→ COLUMN
-→ TALKS & WORKSHOPS
-→ PRESS & INTERVIEW
-→ SOCIAL MEDIA
+기존 `site.json` 한 파일을 분야별 데이터 파일로 완전히 분리한 운영용 구조입니다.
+평소 콘텐츠를 추가하거나 빼는 경우 HTML/CSS를 수정하지 않습니다.
 
-기존 홈페이지 코드를 수정해서 만든 것이 아니라 Clean Archive 기준본을 확장한 버전입니다.
+## 파일 구조
 
-## 가장 중요한 관리 원칙
+```text
+index.html
+404.html
 
-일상적인 홈페이지 업데이트는 `data/site.json`만 수정합니다.
+assets/
+  style.css
+  app.js
+  favicon.svg
+  images/
+    profile.jpg
+    seoul-bookfair-2026.jpg
 
-### 추천사 추가
-
-`blurbs` 배열에 아래 한 항목만 추가합니다.
-
-```json
-{
-  "year": "2026",
-  "title": "책 제목",
-  "author": "저자명",
-  "publisher": "출판사",
-  "role": "추천사",
-  "url": "https://..."
-}
+data/
+  profile.json       소개 / 연락처 / SNS
+  selected.json      주요 활동
+  works.json         단행본 / 단편소설
+  translations.json  해외 번역판
+  awards.json        수상 및 선정
+  blurbs.json        추천사
+  columns.json       칼럼
+  talks.json         강연과 수업
+  press.json         기사와 인터뷰
+  meta.json          마지막 업데이트 날짜
 ```
 
-현재 첫 추천사 항목은 사용자가 제공한 교보문고 URL을 보존했으나,
-교보문고 페이지에서 서지정보를 안정적으로 불러오지 못해
-`도서 정보 업데이트 예정`으로 두었습니다.
-제목/저자/출판사를 확인하면 JSON의 해당 항목만 수정하면 됩니다.
+## 앞으로 무엇을 수정하면 되나
 
-### Selected Activities
+### 소개 문장이나 연락처
+`data/profile.json`
 
-대표적인 발자취만 넣습니다.
-모든 활동을 중복해서 복사하는 섹션이 아니라,
-방문자가 작가의 성장 흐름을 짧게 파악하는 용도입니다.
+### 새 단행본 / 단편소설 / 절판 상태
+`data/works.json`
 
-### 새 기사
-`press` 배열 맨 위에 한 항목 추가.
+### 새 해외 번역판
+`data/translations.json`
 
-### 새 칼럼
-`columns` 배열에 한 항목 추가.
+### 수상·선정
+`data/awards.json`
 
-### 새 강연
-`talks`에서 해당 카테고리 `items`에 한 항목 추가.
+### 추천사
+`data/blurbs.json`
 
-### 새 작품
-책은 `works.books`, 단편은 `works.short_fiction`에 추가.
+### 국제신문 칼럼
+`data/columns.json`
 
-## GitHub Pages
+### 강연·수업
+`data/talks.json`
 
-ZIP을 풀고 내부 파일/폴더 전체를 저장소 루트에 업로드하세요.
-이후 일상 업데이트에서는 가능하면 `data/site.json` 파일 하나만 교체하세요.
+### 기사·인터뷰
+`data/press.json`
 
+### 홈페이지 하단의 마지막 업데이트 날짜
+`data/meta.json`
 
-## v1.2 업데이트
-- Blurbs / 추천사: 『야수의 산』 · 홍진희 · 클레이하우스 · 2026 반영
-- 의정부 송양고등학교 「쓰는 나, 만드는 나」를 2025/2026 별도 이력으로 분리
-- Talks 항목에 선택적으로 `year` 값을 표시할 수 있도록 렌더러 소폭 확장
+## GitHub에 업데이트하는 법
 
+예를 들어 새 기사가 하나 생겼다면:
 
-## v1.3 분류 체계 개편
-- 홈페이지에 보이는 주요 카테고리를 한글로 통일
-- 작품 > 단행본 > 해외 번역판 > 단편소설 순서로 재배치
-- 해외 번역판에 원작 『강하고 아름다운 할머니가 되고 싶어』 명시
-- Novel → 장편소설, Essay → 에세이 등 유형값 한글화
-- 기사 유형 Article / Interview / News 한글화
-- 「변온동물」에 '절판' 상태 표시
-- 독립된 'Translated Editions' 섹션 삭제
+1. `press.json`만 수정합니다.
+2. GitHub 저장소에서 `data/press.json`을 새 파일로 교체합니다.
+3. Commit changes 합니다.
+4. 홈페이지를 새로고침합니다.
+
+`assets/app.js`는 JSON 파일을 `cache: "no-store"`로 읽기 때문에
+이전처럼 브라우저가 예전 JSON을 오래 보여주는 문제를 줄였습니다.
+
+## 중요한 원칙
+
+- 콘텐츠 추가/삭제 때문에 `index.html`을 수정하지 않습니다.
+- 디자인을 바꿀 때만 `assets/style.css`을 수정합니다.
+- 데이터 표시 방식이나 새로운 카테고리를 만들 때만 `assets/app.js`와 `index.html`을 수정합니다.
+- JSON을 직접 수정할 때는 쉼표와 따옴표 문법에 주의합니다.
+
+이 버전을 앞으로의 기준본으로 사용하세요.
